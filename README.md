@@ -15,13 +15,13 @@
 
 ### Features
 #### Model Management
-Change models using the `/model` command and adjust parameters like `num_ctx`, `system_prompt`, and `temperature`. Notifications automatically send when models load into RAM. Models can be removed with the `remove` parameter. Download models directly through Discord by messaging a model tag link.
+Switch models using the `/model` command and adjust parameters like `num_ctx`, `system_prompt`, and `temperature`. Notifications automatically send when models load into RAM. Models can be removed with the `remove` parameter. Download models directly through Discord by messaging a model tag link.
 
 > `https://ollama.com/library/phi3.5:3.8b-mini-instruct-q2_K` <br>
 
 > `https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/blob/main/Llama-3.2-1B-Instruct-Q8_0.gguf`
 
-Model downloading and removal is turned off by default and can be enabled by configuring the `.env`. 
+> ⚠️ Model downloading and removal is turned off by default and can be enabled by configuring the `.env`. 
  
 #### QoL Improvements
 Streaming message generation with messages longer than 1500 characters split into pages. Message attachments like text-based files, web links, and screenshots can be added into the context window. 
