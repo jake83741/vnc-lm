@@ -1,6 +1,6 @@
 # vnc-lm
 
-<sub> `10-19-2024: Added handling for downloading models from HuggingFace.` </sub>
+<sub> `10-19-2024: Added support for HuggingFace links.` </sub>
 
 ### Introduction
 [**vnc-lm**](https://github.com/jake83741/vnc-lm) is a Discord bot that lets you talk with and configure language models in your server. It uses [**ollama**](https://github.com/ollama/ollama) to manage and run different models.
