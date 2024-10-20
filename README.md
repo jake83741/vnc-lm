@@ -143,8 +143,7 @@ Select `Rejoin Conversation` through the Discord context menu to continue an old
 </details>
 
 ### Notes
-1. If an issue arises with the Docker set-up, change the `Ollama_Host` environment variable to 0.0.0.0. See [**server documentation**](https://github.com/ollama/ollama/blob/main/docs/faq.md#how-do-i-configure-ollama-server).
-2. Attachments with large amounts of text will require a higher `num_ctx` value to work properly.
+Attachments with large amounts of text require a higher `num_ctx` value to work properly.
 
 ### License
 This project is licensed under the MIT License.
