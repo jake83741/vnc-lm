@@ -148,5 +148,7 @@ Attachments with large amounts of text require a higher `num_ctx` value to work 
 
 The bot uses OCR to scrape text from screenshots. It does not support multi-modal models currently. 
 
+Pagination occasionally breaks. Deleting the cache inside the local root directory and the Docker container fixes this. I'm looking into what causes this issue.
+
 ### License
 This project is licensed under the MIT License.
