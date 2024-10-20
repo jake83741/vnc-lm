@@ -1,6 +1,5 @@
 # vnc-lm
 
-<sub> `10-20-2024: Added GIFs.` </sub> <br>
 <sub> `10-19-2024: Added support for HuggingFace links.` </sub>
 
 ### Introduction
