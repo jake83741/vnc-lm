@@ -26,7 +26,7 @@ Switch models using the `/model` command and adjust parameters like `num_ctx`, `
 #### QoL Improvements
 Streaming message generation with messages longer than 1500 characters split into pages. Attachments like text-based files, web links, and screenshots can be added into the context window. 
 
-Switch between conversations by clicking `rejoin conversation` in the context menu. Conversations can be continued from any point and with different models. All messages are cached and organized into conversations. `Entrypoint.sh` helps the cache file persist across Docker containers. 
+Switch between conversations by clicking `rejoin conversation` in the context menu. Conversations can be forked from any point and with different models. All messages are cached and organized into conversations. `Entrypoint.sh` helps the message cache persist across Docker containers. 
 
 > 🚥 Messaging `stop` will end message generation early. Messaging `reset` returns models to their default configuration.
 
