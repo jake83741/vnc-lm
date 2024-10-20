@@ -40,23 +40,15 @@
    `cd vnc-lm`
 3. Rename `.env.example` to `.env` in the project root directory. Configure the `.env` file:
  
-> `TOKEN=`: Your Discord bot token. Use the [**Discord Developer Portal**](https://discord.com/developers/applications/) to create this. Check the necessary permissions for your Discord bot.<br>
-
-> `OLLAMAURL=`: The URL of your Ollama server. See [**API documentation**](https://github.com/ollama/ollama/blob/main/docs/api.md#request). Docker requires `http://host.docker.internal:11434`<br>
-
-> `NUM_CTX=` Value controlling context window size. Defaults to 2048.<br>
-
-> `TEMPERATURE=` Value controlling the randomness of responses. Defaults to 0.4.<br>
-
-> `KEEP_ALIVE=`: Value controlling how long a model stays in memory. Defaults to 45m.<br>
-
-> `CHARACTER_LIMIT=` Value controlling the character limit for page embeds. Defaults to 1500.<br>
-
-> `API_RESPONSE_UPDATE_FREQUENCY=` Value controlling amount of API responses to chunk before updating message. A low number will cause Discord API to throttle. Defaults to 10.<br>
-
-> `ADMIN=` Discord user ID. This will enable downloading and removing models.<br>
-
-> `REQUIRE_MENTION=` Require the bot to be mentioned or not. Defaults to false.<br>
+`TOKEN=`: Your Discord bot token. Use the [**Discord Developer Portal**](https://discord.com/developers/applications/) to create this. Check the necessary permissions for your Discord bot.<br>
+`OLLAMAURL=`: The URL of your Ollama server. See [**API documentation**](https://github.com/ollama/ollama/blob/main/docs/api.md#request). Docker requires `http://host.docker.internal:11434`<br>
+`NUM_CTX=` Value controlling context window size. Defaults to 2048.<br>
+`TEMPERATURE=` Value controlling the randomness of responses. Defaults to 0.4.<br>
+`KEEP_ALIVE=`: Value controlling how long a model stays in memory. Defaults to 45m.<br>
+`CHARACTER_LIMIT=` Value controlling the character limit for page embeds. Defaults to 1500.<br>
+`API_RESPONSE_UPDATE_FREQUENCY=` Value controlling amount of API responses to chunk before updating message. A low number will cause Discord API to throttle. Defaults to 10.<br>
+`ADMIN=` Discord user ID. This will enable downloading and removing models.<br>
+`REQUIRE_MENTION=` Require the bot to be mentioned or not. Defaults to false.<br>
 
 ### Docker Installation (Preferred)
 ```
