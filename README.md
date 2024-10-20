@@ -73,7 +73,7 @@ npm start
 [<img width="977" alt="image" src="https://github.com/user-attachments/assets/38e254cc-b6b5-4de1-b3a9-59176e133e09">
 ](https://github.com/jake83741/vnc-lm/blob/main/imgs/366593695-38e254cc-b6b5-4de1-b3a9-59176e133e09.png?raw=true)
 <br> 
-`/model`: Load, configure, or remove a language model. Optional parameters for `num_ctx`, `system_prompt`, `temperature`, and `remove`.
+Models can be loaded, configured, or removed with `/model`.  Model behavior can be quickly changed by setting the optional parameters for `num_ctx`, `system_prompt`, and `temperature`. 
 <br>
 <br>
 
