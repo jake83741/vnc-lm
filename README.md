@@ -109,7 +109,7 @@ npm start
 ├── dockerfile
 ├── entrypoint.sh
 ├── .env.example
-├── imgs
+├── screenshots
 ├── package.json
 ├── src
 │   ├── api-connections
