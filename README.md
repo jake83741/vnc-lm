@@ -3,7 +3,7 @@
 #### Updates
 <sub>
  
-10-19-2024: <br> `Added handling for downloading models from HuggingFace.`
+10-19-2024: <br> <br> `Added handling for downloading models from HuggingFace.`
 
 </sub> 
 
