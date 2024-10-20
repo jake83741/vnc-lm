@@ -37,11 +37,11 @@ Messaging `stop` will end message generation early. Messaging `reset` returns mo
 ```
 git clone https://github.com/jake83741/vnc-lm.git
 cd vnc-lm
+```
 
 Rename `.env.example` to `.env`.
 
-Configure the `.env` file:
-```
+Configure the below fields in the `.env`: 
 
 `TOKEN=`: Your Discord bot token. Use the [**Discord Developer Portal**](https://discord.com/developers/applications/) to create this. Check the necessary permissions for your Discord bot.<br>
 `OLLAMAURL=`: The URL of your Ollama server. See [**API documentation**](https://github.com/ollama/ollama/blob/main/docs/api.md#request). Docker requires `http://host.docker.internal:11434`<br>
