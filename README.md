@@ -146,7 +146,7 @@ Select `Rejoin Conversation` through the Discord context menu. Rejoin conversati
 ### Notes
 Attachments with large amounts of text require a higher `num_ctx` value to work properly.
 
-The bot currently can only handle text-focused screenshots through OCR. 
+The bot uses OCR to scrape text from screenshots. It does not support multi-modal models currently. 
 
 ### License
 This project is licensed under the MIT License.
