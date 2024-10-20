@@ -81,7 +81,7 @@ Models can be loaded, configured, or removed with `/model`.  Model behavior can 
 [![image](https://github.com/user-attachments/assets/7f629653-48ff-46f8-9ee9-ed306cceea55)
 ](https://github.com/jake83741/vnc-lm/blob/main/imgs/365389934-7f629653-48ff-46f8-9ee9-ed306cceea55.png?raw=true)
 <br> 
-`Rejoin Conversation`: Rejoin an old conversation at a specific point. Messages up to the selected point in the conversation will also be included.
+Select `Rejoin Conversation` through the Discord context menu to continue an old thread. 
 <br>
 <br>
 
