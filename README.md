@@ -30,8 +30,8 @@
 - [x] Messaging `stop` will end message generation early. Messaging `reset` returns models to their default configuration.
 
 ### Requirements 
-1. [**Ollama**](https://github.com/ollama/ollama): Get up and running with Llama 3.1, Mistral, Gemma 2, and other large language models.
-2. [**Docker**](https://www.docker.com/): Docker is a platform designed to help developers build, share, and run container applications. We handle the tedious setup, so you can focus on the code.
+[**Ollama**](https://github.com/ollama/ollama): Get up and running with Llama 3.1, Mistral, Gemma 2, and other large language models. <br>
+[**Docker**](https://www.docker.com/): Docker is a platform designed to help developers build, share, and run container applications. We handle the tedious setup, so you can focus on the code.
 
 ### Environment Configuration
 1. Clone the repository with
@@ -39,16 +39,16 @@
 2. CD into the directory with
    `cd vnc-lm`
 3. Rename `.env.example` to `.env` in the project root directory. Configure the `.env` file:
- ----
-- `TOKEN=`: Your Discord bot token. Use the [**Discord Developer Portal**](https://discord.com/developers/applications/) to create this. Check the necessary permissions for your Discord bot.
-- `OLLAMAURL=`: The URL of your Ollama server. See [**API documentation**](https://github.com/ollama/ollama/blob/main/docs/api.md#request). Docker requires `http://host.docker.internal:11434`
-- `NUM_CTX=` Value controlling context window size. Defaults to 2048.
-- `TEMPERATURE=` Value controlling the randomness of responses. Defaults to 0.4.
-- `KEEP_ALIVE=`: Value controlling how long a model stays in memory. Defaults to 45m.
-- `CHARACTER_LIMIT=` Value controlling the character limit for page embeds. Defaults to 1500.
-- `API_RESPONSE_UPDATE_FREQUENCY=` Value controlling amount of API responses to chunk before updating message. A low number will cause Discord API to throttle. Defaults to 10.
-- `ADMIN=` Discord user ID. This will enable downloading and removing models.
-- `REQUIRE_MENTION=` Require the bot to be mentioned or not. Defaults to false.
+ 
+`TOKEN=`: Your Discord bot token. Use the [**Discord Developer Portal**](https://discord.com/developers/applications/) to create this. Check the necessary permissions for your Discord bot.<br>
+`OLLAMAURL=`: The URL of your Ollama server. See [**API documentation**](https://github.com/ollama/ollama/blob/main/docs/api.md#request). Docker requires `http://host.docker.internal:11434`<br>
+`NUM_CTX=` Value controlling context window size. Defaults to 2048.<br>
+`TEMPERATURE=` Value controlling the randomness of responses. Defaults to 0.4.<br>
+`KEEP_ALIVE=`: Value controlling how long a model stays in memory. Defaults to 45m.<br>
+`CHARACTER_LIMIT=` Value controlling the character limit for page embeds. Defaults to 1500.<br>
+`API_RESPONSE_UPDATE_FREQUENCY=` Value controlling amount of API responses to chunk before updating message. A low number will cause Discord API to throttle. Defaults to 10.<br>
+`ADMIN=` Discord user ID. This will enable downloading and removing models.<br>
+`REQUIRE_MENTION=` Require the bot to be mentioned or not. Defaults to false.<br>
 
 ### Docker Installation (Preferred)
 ```
