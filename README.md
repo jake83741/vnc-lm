@@ -75,19 +75,18 @@ npm start
 <br>
 <br>
 
+[<img width="977" alt="image" src="https://github.com/user-attachments/assets/192ccccd-d33c-4bb4-ac8f-3c31d6c91dc6">
+](https://github.com/jake83741/vnc-lm/blob/main/imgs/364975217-192ccccd-d33c-4bb4-ac8f-3c31d6c91dc6.png?raw=true)
+<br> 
+`/help`: Instructions for how to use the bot.
+<br>
+<br>
+
 
 [![image](https://github.com/user-attachments/assets/7f629653-48ff-46f8-9ee9-ed306cceea55)
 ](https://github.com/jake83741/vnc-lm/blob/main/imgs/365389934-7f629653-48ff-46f8-9ee9-ed306cceea55.png?raw=true)
 <br> 
 `Rejoin Conversation`: Rejoin an old conversation at a specific point. Messages up to the selected point in the conversation will also be included.
-<br>
-<br>
-
-
-[<img width="977" alt="image" src="https://github.com/user-attachments/assets/192ccccd-d33c-4bb4-ac8f-3c31d6c91dc6">
-](https://github.com/jake83741/vnc-lm/blob/main/imgs/364975217-192ccccd-d33c-4bb4-ac8f-3c31d6c91dc6.png?raw=true)
-<br> 
-`/help`: Instructions for how to use the bot.
 <br>
 <br>
 
