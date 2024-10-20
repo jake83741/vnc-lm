@@ -23,7 +23,11 @@ Change models using the `/model` command and adjust parameters like `num_ctx`, `
 Model downloading and removal is turned off by default and can be enabled by configuring the `.env`. 
  
 #### QoL Improvements
-Streaming message generation with messages longer than 1500 characters split into pages. Message attachments like text-based files, web links, and screenshots can be added into the context window. Switch between conversations by clicking `rejoin conversation` in the context menu. Conversations can be continued from any point and with different models. All messages are cached and organized into conversations. `Entrypoint.sh` helps the cache file persist across Docker containers. Messaging `stop` will end message generation early. Messaging `reset` returns models to their default configuration.
+Streaming message generation with messages longer than 1500 characters split into pages. Message attachments like text-based files, web links, and screenshots can be added into the context window. 
+
+Switch between conversations by clicking `rejoin conversation` in the context menu. Conversations can be continued from any point and with different models. All messages are cached and organized into conversations. `Entrypoint.sh` helps the cache file persist across Docker containers. 
+
+Messaging `stop` will end message generation early. Messaging `reset` returns models to their default configuration.
 
 ### Requirements 
 [**Ollama**](https://github.com/ollama/ollama): Get up and running with Llama 3.1, Mistral, Gemma 2, and other large language models. <br>
