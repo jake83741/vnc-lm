@@ -39,7 +39,7 @@ git clone https://github.com/jake83741/vnc-lm.git
 cd vnc-lm
 ```
 
-Rename `.env.example` to `.env` in the project root directory. 
+Rename `.env.example` to `.env`.
 
 Configure the `.env` file:
 
