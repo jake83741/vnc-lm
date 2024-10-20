@@ -28,7 +28,7 @@ Streaming message generation with messages longer than 1500 characters split int
 
 Switch between conversations by clicking `rejoin conversation` in the context menu. Conversations can be continued from any point and with different models. All messages are cached and organized into conversations. `Entrypoint.sh` helps the cache file persist across Docker containers. 
 
-Messaging `stop` will end message generation early. Messaging `reset` returns models to their default configuration.
+> 🚥 Messaging `stop` will end message generation early. Messaging `reset` returns models to their default configuration.
 
 ### Requirements 
 [**Ollama**](https://github.com/ollama/ollama): Get up and running with Llama 3.1, Mistral, Gemma 2, and other large language models. <br>
