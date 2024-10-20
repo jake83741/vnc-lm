@@ -21,7 +21,7 @@ Switch models using the `/model` command and adjust parameters like `num_ctx`, `
 
 > `https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/blob/main/Llama-3.2-1B-Instruct-Q8_0.gguf`
 
-> ⚠️ Model downloading and removal is turned off by default and can be enabled by configuring the `.env`. 
+> 🚧 Model downloading and removal is turned off by default and can be enabled by configuring the `.env`. 
  
 #### QoL Improvements
 Streaming message generation with messages longer than 1500 characters split into pages. Message attachments like text-based files, web links, and screenshots can be added into the context window. 
