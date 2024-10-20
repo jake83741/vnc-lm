@@ -15,7 +15,7 @@
 - [x] Change models using the `/model` command and adjust parameters like `num_ctx`, `system_prompt`, and `temperature`.
 - [x] Notifications when models load into RAM.
 - [x] Models can be removed with the `remove` parameter.
-- [x] Download models directly through Discord by messaging a tag URL.
+- [x] Download models directly through Discord by messaging a tag link.
 
 > `https://ollama.com/library/phi3.5:3.8b-mini-instruct-q2_K` <br>
 
