@@ -55,6 +55,8 @@ Messaging `stop` will end message generation early. Messaging `reset` returns mo
 docker compose up --build
 ```
 
+> 💡 Send `/help` for instructions on how to use the bot.
+
 ### Manual Installation
 <details>
 <br>
@@ -72,13 +74,6 @@ npm start
 ](https://github.com/jake83741/vnc-lm/blob/main/imgs/366593695-38e254cc-b6b5-4de1-b3a9-59176e133e09.png?raw=true)
 <br> 
 `/model`: Load, configure, or remove a language model. Optional parameters for `num_ctx`, `system_prompt`, `temperature`, and `remove`.
-<br>
-<br>
-
-[<img width="977" alt="image" src="https://github.com/user-attachments/assets/192ccccd-d33c-4bb4-ac8f-3c31d6c91dc6">
-](https://github.com/jake83741/vnc-lm/blob/main/imgs/364975217-192ccccd-d33c-4bb4-ac8f-3c31d6c91dc6.png?raw=true)
-<br> 
-`/help`: Instructions for how to use the bot.
 <br>
 <br>
 
