@@ -14,7 +14,7 @@
 
 ### Features
 #### Model Management
-Change models using the `/model` command and adjust parameters like `num_ctx`, `system_prompt`, and `temperature`. Notifications automatically send when models load into RAM. Models can be removed with the `remove` parameter. Download models directly through Discord by messaging a tag link.
+Change models using the `/model` command and adjust parameters like `num_ctx`, `system_prompt`, and `temperature`. Notifications automatically send when models load into RAM. Models can be removed with the `remove` parameter. Download models directly through Discord by messaging a model tag link.
 
 > `https://ollama.com/library/phi3.5:3.8b-mini-instruct-q2_K` <br>
 
