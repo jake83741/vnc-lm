@@ -5,11 +5,12 @@
 ### Introduction
 [**vnc-lm**](https://github.com/jake83741/vnc-lm) is a Discord bot that lets you talk with and configure language models in your server. It uses [**ollama**](https://github.com/ollama/ollama) to manage and run different models.
 
-[![image](https://github.com/user-attachments/assets/f31e4c58-4338-4af5-9269-828fcfb3bd5c) 
-](https://github.com/jake83741/vnc-lm/blob/main/imgs/363810259-f31e4c58-4338-4af5-9269-828fcfb3bd5c.png?raw=true) 
+
+
+![Screen Recording 2024-10-20 at 2 10 47 AM](https://github.com/user-attachments/assets/bd4eadaa-f1e5-4c06-975e-33ed74fd7de1)
 <br> <sup>Web scraping example</sup>
 <br>
-![image](https://github.com/user-attachments/assets/0c901174-16eb-4bb6-a637-f5759d9f4300)
+![Screen Recording 2024-10-20 at 2 18 32 AM](https://github.com/user-attachments/assets/283c51ea-ad05-4a20-8cf1-c3a241b8e6e8)
 <br> <sup>Model pulling example</sup>
 
 ### Features
