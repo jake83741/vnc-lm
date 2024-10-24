@@ -1,0 +1,18 @@
+services:
+  discord-bot:
+    build:
+      context: .  # Use the current directory as the build context
+      dockerfile: Dockerfile  # Use the Dockerfile in the current directory
+    env_file:
+      - .env  # Load environment variables from .env file
+    ports:
+      - "3000:3000"  # Map container port 3000 to host port 3000
+    extra_hosts:
+      - "host.docker.internal:host-gateway"  # Allow container to communicate with host machine
+    volumes:
+      - ./cache:/app/cache  # Mount local ./cache directory to /app/cache in the container
+    command: sh -c "mkdir -p /app/cache && /app/entrypoint.sh"  # Create cache directory and run entrypoint script
+
+networks:
+  default:
+    name: discord-bot-network  # Set a custom name for the default network
