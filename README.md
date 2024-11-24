@@ -47,7 +47,7 @@ Local models can be removed with the `remove` parameter of `/model`.
 
 > Model downloading and removal is turned off by default and can be enabled by configuring the `.env`.
 
-Reply `pull` to any message to create a new thread with all context up to that point. The new thread includes a relationship diagram and conversation summary up to the pulled point. Hop between threads while keeping separate conversation histories, letting you explore different paths with any model.
+Reply `>` to any message to create a new branch of the conversation. The new branch will include a relationship diagram and conversation summary up to the point where it branched. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
 
 
 #### QoL Improvements
