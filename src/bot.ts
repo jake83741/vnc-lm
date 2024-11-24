@@ -21,7 +21,12 @@ let modelDirectories: ModelDirectories;
 async function loadModelDirectoriesAndRegisterCommands() {
   await ClientFactory.initializeOllamaModels(); // Initialize Ollama models first
   modelDirectories = await defaultModelManager.loadModelDirectories();
-  console.log('Loaded model directories:', Object.keys(modelDirectories));
+  console.log('Loaded model directories:\n[' + 
+    Object.keys(modelDirectories)
+      .map(dir => '\n  \x1b[90m' + `'${dir}'` + '\x1b[0m')
+      .join(',') + 
+    '\n]'
+  );
   const modelOptions = Object.keys(modelDirectories).map(modelName => ({ name: modelName, value: modelName }));
   await registerCommands(client, modelOptions);
   return modelDirectories;
@@ -39,7 +44,6 @@ async function initializeBotSettings() {
       chatBot.setTemperature(lastTemperature || 0.4);
       chatBot.setNumCtx(lastNumCtx || defaultNumCtx);
       if (lastSystemPrompt) chatBot.setSystem(lastSystemPrompt);
-      console.log(`Resumed last used model: ${lastUsedModel}`);
   } else {
       // If no model in state, try to get it from active channel's conversation
       const activeChannel = getActiveChannel();
@@ -68,9 +72,7 @@ async function initializeBotSettings() {
                       }));
                       client.setConversationHistory(history);
                       chatBot.setConversationHistory(history);
-                      
-                      console.log(`Resumed model from conversation: ${modelName}`);
-                      
+                                            
                       // Update state with the restored model
                       updateState({ lastUsedModel: modelName });
                   }
