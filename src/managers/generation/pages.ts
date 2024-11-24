@@ -1,6 +1,6 @@
 import { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } from 'discord.js';
-import { MessageData } from '../../utilities/types';
-import { characterLimit } from '../../utilities/settings';
+import { MessageData } from '../../utilities';
+import { characterLimit } from '../../utilities';
 
 // Cached markdown regex patterns
 const MARKDOWN_PATTERNS = {
@@ -10,56 +10,40 @@ const MARKDOWN_PATTERNS = {
     inlineCode: /`(?!``)/g
 };
 
+// Smart content splitter function
+function findOptimalSplitPoint(content: string, limit: number): number {
+    if (content.length <= limit) return content.length;
+
+    // Check within a reasonable range before limit
+    for (let i = limit; i >= Math.max(0, limit - 100); i--) {
+        const char = content[i];
+        const nextChar = content[i + 1];
+        
+        // Avoid splitting markdown
+        if (content.slice(i - 3, i) === '```' || 
+            content.slice(i, i + 3) === '```') continue;
+            
+        // Avoid splitting numbers in lists
+        if (/^\d+\.\s*$/.test(content.slice(i + 1).split('\n')[0])) continue;
+
+        // Good split points: punctuation followed by space or newline
+        if (('.!?\n'.includes(char) && (nextChar === ' ' || nextChar === '\n')) ||
+            (char === '\n' && !content.slice(i + 1, i + 10).trim().startsWith('1.'))) {
+            return i + 1;
+        }
+    }
+
+    // Fallback to last complete line
+    const lastNewline = content.slice(0, limit).lastIndexOf('\n');
+    return lastNewline > 0 ? lastNewline + 1 : limit;
+}
+
 // Track markdown state
 interface MarkdownState {
     codeBlock: { isOpen: boolean; language: string };
     bold: boolean;
     italic: boolean;
     inlineCode: boolean;
-}
-
-function findOptimalSplitPoint(content: string, limit: number): number {
-    if (content.length <= limit) return content.length;
-
-    // Never split in the middle of a word - find last space before limit
-    let i = Math.min(limit, content.length);
-    
-    // Scan back to find the last space/newline
-    while (i > 0) {
-        // Found a space or newline
-        if (/[\s\n]/.test(content[i])) {
-            // Check for our special cases
-            const beforeText = content.slice(Math.max(0, i - 3), i);
-            const afterText = content.slice(i, i + 3);
-            const nextLine = content.slice(i + 1).split('\n')[0];
-
-            // Skip if we're in the middle of markdown
-            if (beforeText.includes('```') || afterText.includes('```')) {
-                i--;
-                continue;
-            }
-
-            // Skip if we're in a numbered list
-            if (/^\d+\.\s*/.test(nextLine)) {
-                i--;
-                continue;
-            }
-
-            // Skip if we just ended with a colon
-            if (content[i - 1] === ':') {
-                i--;
-                continue;
-            }
-
-            // Otherwise this is a good split point
-            return i + 1;
-        }
-        i--;
-    }
-
-    // If we couldn't find a good split point, just return 0
-    // This will force creating a new page
-    return 0;
 }
 
 export function addToPages(messageData: MessageData, content: string): void {
@@ -128,13 +112,11 @@ export function addToPages(messageData: MessageData, content: string): void {
             if (state.inlineCode) newPageContent += '`';
             
             messageData.pages.push(newPageContent);
-            // Set current page to the newly created page
-            messageData.currentPageIndex = messageData.pages.length - 1;
         }
     }
 }
 
-export function updatePageEmbed(messageData: MessageData, isComplete: boolean): EmbedBuilder {
+export function createPageEmbed(messageData: MessageData, isComplete: boolean): EmbedBuilder {
     const spinnerEmojis = ['+', 'x', '*'];
     const emojiIndex = Math.floor(Date.now() / 500) % spinnerEmojis.length;
     
@@ -163,15 +145,3 @@ export function createPageButtons(messageData: MessageData): ActionRowBuilder<Bu
                 .setDisabled(currentPage === totalPages - 1)
         );
 }
-
-export interface PageManager {
-    addToPages: typeof addToPages;
-    updatePageEmbed: typeof updatePageEmbed;
-    createPageButtons: typeof createPageButtons;
-}
-
-export const pageManager: PageManager = {
-    addToPages,
-    updatePageEmbed,
-    createPageButtons
-};
