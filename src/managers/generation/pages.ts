@@ -19,6 +19,11 @@ function findOptimalSplitPoint(content: string, limit: number): number {
         const char = content[i];
         const nextChar = content[i + 1];
         
+        // Don't split if we're in the middle of a numbered list item
+        if (/^\d+\.$/.test(content.slice(Math.max(0, i-5), i+1))) {
+            continue;
+        }
+
         // Avoid splitting markdown
         if (content.slice(i - 3, i) === '```' || 
             content.slice(i, i + 3) === '```') continue;
