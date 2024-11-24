@@ -31,8 +31,8 @@ function findOptimalSplitPoint(content: string, limit: number): number {
         // Avoid splitting numbers in lists
         if (/^\d+\.\s*$/.test(content.slice(i + 1).split('\n')[0])) continue;
 
-        // Good split points: punctuation followed by space or newline
-        if (('.!?\n'.includes(char) && (nextChar === ' ' || nextChar === '\n')) ||
+        // Good split points: exclamation mark, question mark, or newline followed by space or newline
+        if (('!?\n'.includes(char) && (nextChar === ' ' || nextChar === '\n')) ||
             (char === '\n' && !content.slice(i + 1, i + 10).trim().startsWith('1.'))) {
             return i + 1;
         }
