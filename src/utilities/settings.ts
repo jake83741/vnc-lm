@@ -30,10 +30,8 @@ export class BotSettings {
         const channel = await client.channels.fetch(state.activeChannel);
         setActiveChannel(channel);
         if (channel && 'name' in channel) {
-          console.log(`Resumed active channel: ${channel.name}`);
         }
       } catch (error) {
-        console.log('Unable to fetch active channel. Setting to null.');
         setActiveChannel(null);
       }
     }
