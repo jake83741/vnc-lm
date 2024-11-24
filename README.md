@@ -127,7 +127,7 @@ model_list:
 docker compose up --build --no-color
 ```
 
-![Screen Recording 2024-11-24 at 12 30 25 PM](https://github.com/user-attachments/assets/15fadc7a-d552-438b-863a-a19b85485c5b)
+![Screen Recording 2024-11-24 at 12 46 32 PM](https://github.com/user-attachments/assets/d3825bf1-a3d2-4bd9-a089-1630cc8bbcc8)
 <sub>successful build</sub>
 
 > Send `/help` for instructions on how to use the bot.
