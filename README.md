@@ -12,7 +12,7 @@ Load and manage language models through a local [**ollama**](https://ollama.com/
 ### Features
 #### Model Management
 
-Load models using the `/model` command. Configure model behavior by adjusting the `num_ctx` (context length), `system_prompt` (base instructions), and `temperature` (response randomness) parameters. 
+Load models using the `/model` command. Configure model behavior by adjusting the `system_prompt` (base instructions), `temperature` (response randomness), and `num_ctx` (context length) parameters. 
 
 ```console
 # load and configure models
