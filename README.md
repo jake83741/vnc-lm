@@ -5,7 +5,7 @@ Message with Claude-3.5-Sonnet, Llama-3.2, GPT-4o, and others through Discord.
  
 Load and manage language models through a local [**ollama**](https://ollama.com/) instance or hosted APIs with [**LiteLLM**](https://www.litellm.ai/). Configure model parameters, pull conversations, and refine prompts to improve responses.
 
-![Screen Recording 2024-11-21 at 12 08 45 AM](https://github.com/user-attachments/assets/616bd678-6ad2-4562-b402-f0e04a70796a)
+![Screen Recording 2024-11-24 at 2 50 46 PM](https://github.com/user-attachments/assets/7984eefb-9faf-4c5a-9a1b-1ae76f840116)
 <br> <sup>pull feature</sup>
 <br>
 
