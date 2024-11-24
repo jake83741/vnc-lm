@@ -1,7 +1,7 @@
 import { Client, Interaction, Message, PartialMessage } from 'discord.js';
 import { MessageData, Conversation, CachedMessageData } from '../../utilities/types';
 import { cacheStore, updateMessageCache } from '../../utilities';
-import { updatePageEmbed, createPageButtons } from './pages';
+import { createPageEmbed, createPageButtons } from './pages';
 
 // Export messageDataMap at the top
 export const messageDataMap = new Map<string, MessageData>();
@@ -40,7 +40,7 @@ export function setupGlobalMessageCollector(client: Client, messageDataMap: Map<
 
     if (nextIndex !== currentData.currentPageIndex) {
         currentData.currentPageIndex = nextIndex;
-        const updatedEmbed = updatePageEmbed(currentData, true);
+        const updatedEmbed = createPageEmbed(currentData, true);
         const updatedRow = createPageButtons(currentData);
 
         let updateSuccessful = false;
