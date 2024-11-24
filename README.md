@@ -114,7 +114,7 @@ model_list:
 - model_name: gpt-3.5-turbo-instruct
   litellm_params:
     model: openai/gpt-3.5-turbo-instruct
-    api_key: os.environ/OPENROUTER_API_KEY
+    api_key: os.environ/OPENAI_API_KEY
 - model_name: 
   litellm_params:
     model: 
@@ -127,7 +127,8 @@ model_list:
 docker compose up --build --no-color
 ```
 
-![Screen Recording 2024-11-23 at 8 11 29 PM](https://github.com/user-attachments/assets/250154d0-c492-4df4-bcde-4709158660c9)
+![Screen Recording 2024-11-23 at 11 43 28 PM](https://github.com/user-attachments/assets/d33668e4-4cd0-4257-a85a-cb6f0206faf9)
+<sub>successful build</sub>
 
 > Send `/help` for instructions on how to use the bot.
 
