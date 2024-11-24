@@ -208,7 +208,6 @@ docker compose up --build --no-color
 <br>
 
 1. Set higher `num_ctx` values when using attachments with large amounts of text.
-2. Vision models may have difficulty with follow-up questions.
 
 </details>
 
