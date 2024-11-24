@@ -1,6 +1,6 @@
 import { Message, TextChannel, DMChannel, NewsChannel, ThreadChannel, MessageCreateOptions, MessagePayload, MessageEditOptions } from 'discord.js';
 import { BotSettings, chatBot, messageUpdateInterval, MessageData, updateMessageCache, messageDataMap } from '../../utilities';
-import { addToPages, updatePageEmbed, createPageButtons } from './pages';
+import { addToPages, createPageEmbed, createPageButtons } from './pages';
 import { ClientFactory } from '../../api-connections/factory';
 import axios from 'axios';
 
@@ -26,7 +26,7 @@ async function handleStreamResponse(
     }
 
     const updateMessage = async () => {
-        const embed = updatePageEmbed(messageData, isComplete);
+        const embed = createPageEmbed(messageData, isComplete);
         const row = createPageButtons(messageData);
         const messageOptions: MessageCreateOptions & MessageEditOptions = { 
             embeds: [embed], 
