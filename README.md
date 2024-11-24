@@ -207,8 +207,8 @@ docker compose up --build --no-color
 <details>
 <br>
 
-- The `num_ctx` parameter is strictly for local models.
-- Set higher `num_ctx` values when using attachments with large amounts of text.
+1. The `num_ctx` parameter is strictly for local models.
+2. Set higher `num_ctx` values when using attachments with large amounts of text.
 
 </details>
 
