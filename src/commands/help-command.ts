@@ -26,7 +26,7 @@ export const handleHelpCommand = async (interaction: CommandInteraction<CacheTyp
         '• Messages over 1500 characters are automatically paginated with navigation.\n' +
         '• Send `stop` to end message generation early.\n' +
         '• Edit your messages to refine the model\'s response.\n' +
-        '• Reply to a message with `pull` to branch the conversation.'
+        '• Reply to a message with `_` to branch the conversation.'
       },
       { name: 'Context Features', value:
         '• Attach text files for additional context.\n' +
