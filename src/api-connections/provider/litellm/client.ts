@@ -11,6 +11,20 @@ export class LiteLLMClient extends BaseClient {
         this.baseUrl = baseUrl;
     }
 
+    private async makeRequest(messages: any[], temperature: number, modelName: string) {
+        return await axios({
+            method: 'post',
+            url: `${this.baseUrl}/v1/chat/completions`,
+            data: {
+                model: modelName,
+                messages: messages,
+                temperature: temperature,
+                stream: false,
+                max_tokens: 4096
+            }
+        });
+    }
+
     async generateResponse(
         prompt: string,
         context: string | null = null,
@@ -69,22 +83,31 @@ export class LiteLLMClient extends BaseClient {
         const stream = new Readable({ read() {} });
     
         try {
-            const response = await axios({
-                method: 'post',
-                url: `${this.baseUrl}/v1/chat/completions`,
-                data: {
-                    model: this.modelName,
-                    messages: messages,
-                    temperature: this.temperature,
-                    stream: false,
-                    max_tokens: 4096
-                }
-            });
+            let response;
+            try {
+                // First attempt with images if present
+                response = await this.makeRequest(messages, this.temperature, this.modelName);
+            } catch (firstError: any) {
+                // If we get a 400 error and have images/complex content, retry with text-only
+                if (firstError.response?.status === 400) {
+                    // Convert all messages to text-only format
+                    const textOnlyMessages = messages.map(msg => ({
+                        role: msg.role,
+                        content: Array.isArray(msg.content) 
+                            ? msg.content.find(c => c.type === 'text')?.text || ''
+                            : typeof msg.content === 'string' 
+                                ? msg.content 
+                                : ''
+                    }));
 
-            // Get the complete response content
+                    response = await this.makeRequest(textOnlyMessages, this.temperature, this.modelName);
+                } else {
+                    throw firstError;
+                }
+            }
+
             const content = response.data.choices[0].message.content;
 
-            // Push the entire response as one chunk
             stream.push(JSON.stringify({
                 response: content,
                 context: context,
@@ -119,11 +142,9 @@ export class LiteLLMClient extends BaseClient {
                 });
             }
 
-            // End the stream
             stream.push(null);
 
         } catch (error: any) {
-            // Log the full error details for debugging
             if (error.response) {
                 console.error('Error response data:', error.response.data);
                 console.error('Error response status:', error.response.status);
