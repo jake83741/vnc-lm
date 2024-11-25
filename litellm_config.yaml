@@ -3,7 +3,13 @@ model_list:
   litellm_params:
     model: openai/gpt-3.5-turbo-instruct
     api_key: os.environ/OPENAI_API_KEY
-- model_name: 
+    max_tokens: 2049
+    temperature: 0.7
+- model_name: bedrock-claude-3-5-sonnet-20241022
   litellm_params:
-    model: 
-    api_key: 
+    model: bedrock/anthropic.claude-3-sonnet-20241022-v2:0
+    aws_access_key_id: os.environ/CUSTOM_AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/CUSTOM_AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/CUSTOM_AWS_REGION_NAME
+    max_tokens: 2048
+    temperature: 0.7
