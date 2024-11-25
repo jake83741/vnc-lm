@@ -48,20 +48,6 @@ Local models can be removed with the `remove` parameter of `/model`.
 
 Reply `_` to any message to create a new branch of the conversation. The new branch will include a relationship diagram and conversation summary up to the point where it branched. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
 
-```console
-Conversation thread
-├── battle-austerlitz-place
-│   └── battle-austerlitz-emperors
-
-The Battle of Austerlitz occurred on December 2, 1805, during
-the Napoleonic Wars. It was a significant victory for Napoleon
-Bonaparte's French army against the Third Coalition, consisting of Austrian
-and Russian forces led by Tsar Alexander I and Holy
-Roman Emperor Francis II. The battle is recognized as one
-of Napoleon's greatest triumphs due to his strategic maneuvers and
-tactical skills.
-```
-
 
 #### QoL Improvements
 Long messages are automatically split into pages during generation. Message streaming works with ollama, while hosted APIs handle responses without streaming. The context window supports text files, links, and images. Docker provides the simplest setup.
