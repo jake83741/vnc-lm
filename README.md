@@ -86,21 +86,21 @@ mv .env.example .env
 ----
 
 ```console
-# Configure the below .env fields
+# configure the below .env fields
 
 # Discord bot token
 TOKEN=
-# Administrator Discord user ID
+# administrator Discord user id
 ADMIN=
-# Require bot mention (default: false)
+# require bot mention (default: false)
 REQUIRE_MENTION=
 
-# Turn vision on or off. Turning vision off will turn OCR on. (default: false)
+# turn vision on or off. turning vision off will turn ocr on. (default: false)
 USE_VISION=
 
-# Leave blank to not use ollama
+# leave blank to not use ollama
 OLLAMAURL=http://host.docker.internal:11434
-# Example provider API key. Include as many API keys as necessary.
+# example provider api key. include as many as necessary.
 OPENAI_API_KEY=sk-...8YIH
 ANTHROPIC_API_KEY=sk-...2HZF
 ```
