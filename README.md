@@ -5,7 +5,7 @@ Message with Claude-3.5-Sonnet, Llama-3.2, GPT-4o, and others through Discord.
  
 Load and manage language models through a local [**ollama**](https://github.com/ollama/ollama) instance or hosted APIs with [**LiteLLM**](https://www.litellm.ai/). Configure model parameters, pull conversations, and refine prompts to improve responses.
 
-![Screen Recording 2024-11-24 at 2 50 46 PM](https://github.com/user-attachments/assets/7984eefb-9faf-4c5a-9a1b-1ae76f840116)
+![Screen Recording 2024-11-24 at 10 06 53 PM](https://github.com/user-attachments/assets/9bd73334-74e0-40dd-b17b-a17353b17d63)
 <br>
 
 ### Features
@@ -46,7 +46,7 @@ Local models can be removed with the `remove` parameter of `/model`.
 
 > Model downloading and removal is turned off by default and can be enabled by configuring the `.env`.
 
-Reply `>` to any message to create a new branch of the conversation. The new branch will include a relationship diagram and conversation summary up to the point where it branched. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
+Reply `_` to any message to create a new branch of the conversation. The new branch will include a relationship diagram and conversation summary up to the point where it branched. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
 
 
 #### QoL Improvements
