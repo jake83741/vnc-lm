@@ -5,6 +5,7 @@ import { createPageEmbed, createPageButtons } from './pages';
 
 // Export messageDataMap at the top
 export const messageDataMap = new Map<string, MessageData>();
+const pageUpdateLocks = new Map<string, boolean>();
 
 export function setupGlobalMessageCollector(client: Client, messageDataMap: Map<string, MessageData>) {
   client.on('interactionCreate', async (interaction: Interaction) => {
@@ -12,71 +13,68 @@ export function setupGlobalMessageCollector(client: Client, messageDataMap: Map<
     
     const message = interaction.message as Message;
     
-    let currentData = null;
-    const conversations = Object.values(cacheStore.cache.conversations);
-    for (const conv of conversations) {
-        const typedConv = conv as Conversation;
-        const cachedMsg = typedConv.messages.find((msg: CachedMessageData) => msg.messageId === message.id);
-        if (cachedMsg) {
-            currentData = { ...cachedMsg.data }; // Create a copy
-            break;
-        }
-    }
+    // Use Map instead of globalThis for the lock
+    const updateLock = `page_update_${message.id}`;
+    if (pageUpdateLocks.get(updateLock)) return;
+    pageUpdateLocks.set(updateLock, true);
 
-    if (!currentData?.pages || !Array.isArray(currentData.pages)) {
-        console.error('Invalid pages array:', currentData?.pages);
-        return;
-    }
-
-    const { customId } = interaction;
-    currentData.currentPageIndex = currentData.currentPageIndex ?? 0;
-
-    let nextIndex = currentData.currentPageIndex;
-    if (customId === 'previous') {
-        nextIndex = Math.max(0, currentData.currentPageIndex - 1);
-    } else if (customId === 'next') {
-        nextIndex = Math.min(currentData.pages.length - 1, currentData.currentPageIndex + 1);
-    }
-
-    if (nextIndex !== currentData.currentPageIndex) {
-        currentData.currentPageIndex = nextIndex;
-        const updatedEmbed = createPageEmbed(currentData, true);
-        const updatedRow = createPageButtons(currentData);
-
-        let updateSuccessful = false;
-        try {
-            await interaction.update({ embeds: [updatedEmbed], components: [updatedRow] });
-            updateSuccessful = true;
-        } catch (error: any) {
-            if (error.code === 40060) {
-                // Silently ignore already acknowledged interactions
-                updateSuccessful = true;
-            } else {
-                try {
-                    await message.edit({ embeds: [updatedEmbed], components: [updatedRow] });
-                    updateSuccessful = true;
-                } catch (editError: any) {
-                    if (editError.code !== 40060) {
-                        console.error('Failed to edit message:', editError);
-                    }
-                }
+    try {
+        let currentData = null;
+        const conversations = Object.values(cacheStore.cache.conversations);
+        for (const conv of conversations) {
+            const typedConv = conv as Conversation;
+            const cachedMsg = typedConv.messages.find((msg: CachedMessageData) => 
+                msg.messageId === message.id
+            );
+            if (cachedMsg) {
+                currentData = { ...cachedMsg.data };
+                break;
             }
         }
 
-        if (updateSuccessful) {
-            messageDataMap.set(message.id, currentData);
-            let cacheUpdated = false;
+        if (!currentData?.pages || !Array.isArray(currentData.pages)) {
+            return;
+        }
+
+        const { customId } = interaction;
+        const currentIndex = currentData.currentPageIndex ?? 0;
+        let nextIndex = currentIndex;
+
+        if (customId === 'previous') {
+            nextIndex = Math.max(0, currentIndex - 1);
+        } else if (customId === 'next') {
+            nextIndex = Math.min(currentData.pages.length - 1, currentIndex + 1);
+        }
+
+        if (nextIndex !== currentIndex) {
+            currentData.currentPageIndex = nextIndex;
+            const updatedEmbed = createPageEmbed(currentData, true);
+            const updatedRow = createPageButtons(currentData);
+
+            await interaction.update({ 
+                embeds: [updatedEmbed], 
+                components: [updatedRow] 
+            });
+
+            messageDataMap.set(message.id, { ...currentData });
+            
             for (const conversation of conversations) {
                 const typedConv = conversation as Conversation;
-                const cachedMessage = typedConv.messages.find((msg: CachedMessageData) => msg.messageId === message.id);
+                const cachedMessage = typedConv.messages.find(msg => 
+                    msg.messageId === message.id
+                );
                 if (cachedMessage) {
                     cachedMessage.data = { ...currentData };
-                    cacheStore.saveCache();
-                    cacheUpdated = true;
+                    await cacheStore.saveCache();
                     break;
                 }
             }
         }
+    } catch (error) {
+        console.error('Error updating page:', error);
+    } finally {
+        // Release the lock using Map
+        pageUpdateLocks.delete(updateLock);
     }
 });
 
