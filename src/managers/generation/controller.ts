@@ -88,7 +88,7 @@ export async function handleMessageCreate(message: Message) {
     if (message.author.bot || message.type === MessageType.ThreadCreated) return;
     if (requireMention && !message.mentions.has(message.client.user!.id)) return;
 
-    if (message.reference && message.content.toLowerCase() === '>') {
+    if (message.reference && message.content.toLowerCase() === '_') {
         await handleThreadConversation(message);
         return;
     }
