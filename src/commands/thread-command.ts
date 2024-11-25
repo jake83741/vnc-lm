@@ -52,7 +52,7 @@ function generateTreeDiagram(parentName: string, currentName: string): string {
 }
 
 export async function handleThreadConversation(message: Message) {
-    if (!message.reference || message.content.toLowerCase() !== '>') {
+    if (!message.reference || message.content.toLowerCase() !== '_') {
         return;
     }
 
