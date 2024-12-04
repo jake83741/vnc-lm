@@ -264,6 +264,8 @@ command: -c "exec litellm --config /app/config.yaml >/dev/null 2>&1"
 command: -c "exec litellm --config /app/config.yaml"
 ```
 
+Most issues will be related to the `litellm_config.yaml` file. Double check your model_list vs the examples shown in the [**LiteLLM docs**](https://docs.litellm.ai/docs/providers). Some providers require additional litellm_params. An example can be found [**here**](https://github.com/jake83741/vnc-lm/blob/a902b22c616e6ae2958a54ca230725c358068722/litellm_config.yaml).
+
 #### Cache issues
 Cache issues are rare and difficult to reproduce but if one does occur, deleting `bot_cache.json` and re-building the bot should correct it. 
 
