@@ -95,7 +95,7 @@ While both hosted APIs and Ollama support vision functionality, not all models h
 
 ### LiteLLM Integration
 
-With [**LiteLLM**](https://www.litellm.ai/) integration, a wide range of language model APIs can be accessed through a single proxy interface. Any model provider available through LiteLLM including OpenAI, Anthropic, Azure, and other APIs is supported. 
+With [**LiteLLM**](https://www.litellm.ai/) integration, a wide range of language model APIs can be accessed through a single proxy interface. Any model provider available through LiteLLM is supported. 
 
 Add models by filling out `litellm_config.yaml` file in the `vnc-lm/` directory. The configuration supports all providers and parameters available through LiteLLM's proxy.
 
