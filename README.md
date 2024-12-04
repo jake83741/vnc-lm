@@ -72,8 +72,6 @@ Conversations are stored in `bot_cache.json` and persist across Docker container
 
 The `num_ctx` parameter for `/model` can only be used with ollama models.
 
-Message `stop` to end message generation early.
-
 Download ollama models by sending a model tag link in a channel.
 
 ```console
