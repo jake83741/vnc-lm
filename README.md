@@ -135,8 +135,6 @@ OLLAMAURL=http://host.docker.internal:11434
 # example provider api key. include as many as necessary.
 OPENAI_API_KEY=sk-...8YIH
 ANTHROPIC_API_KEY=sk-...2HZF
-# openai-compatible APIs like text-generation-webui require a placeholder API key
-TEXT_GENERATION_WEBUI_API_KEY=12345
 ```
 
 ### LiteLLM configuration
@@ -150,11 +148,6 @@ model_list:
   litellm_params:
     model: openai/gpt-3.5-turbo-instruct
     api_key: os.environ/OPENAI_API_KEY
-- model_name: Llama-3.2-1B-Instruct-Q4_K_M.gguf
-  litellm_params:
-    model: openai/Llama-3.2-1B-Instruct-Q4_K_M.gguf
-    api_base: http://host.docker.internal:5000/v1
-    api_key: os.environ/TEXT_GENERATION_WEBUI_API_KEY
 - model_name: 
   litellm_params:
     model: 
