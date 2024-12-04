@@ -15,7 +15,7 @@ Load and manage language models through a local [**ollama**](https://github.com/
 Load models using the `/model` command. Configure model behavior by adjusting the `system_prompt` (base instructions), `temperature` (response randomness), and `num_ctx` (context length) parameters. 
 
 ```console
-# load and configure models
+# model loading / configuration example
 /model model:command-r-plus-08-2024 system_prompt: You are a helpful assistant. temperature: 0.4
 ```
 
