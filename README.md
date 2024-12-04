@@ -143,12 +143,12 @@ TEXT_GENERATION_WEBUI_API_KEY=12345
 ```console
 # add models to the litellm_config.yaml
 # it is not necessary to include ollama models here
+# use host.docker.internal when using localhost APIs
 model_list:
 - model_name: gpt-3.5-turbo-instruct
   litellm_params:
     model: openai/gpt-3.5-turbo-instruct
     api_key: os.environ/OPENAI_API_KEY
-# use host.docker.internal when using localhost APIs
 - model_name: Llama-3.2-1B-Instruct-Q4_K_M.gguf
   litellm_params:
     model: openai/Llama-3.2-1B-Instruct-Q4_K_M.gguf
