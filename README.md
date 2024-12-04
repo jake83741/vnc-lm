@@ -59,7 +59,23 @@ The bot creates a new thread upon successful model loading and sends a confirmat
 
 When you switch models within a thread, your conversation history and settings (`system_prompt` and `temperature`) stay unchanged. Resume any conversation by sending a new message.
 
-Download models by sending a model tag link in a channel.
+Reply `_` to any message in a thread to create a new branch of the conversation. The new branch will include a relationship diagram and conversation summary up to the point where it branched. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
+
+#### QoL Improvements
+Long messages are automatically split into pages during generation. The context window supports text files, links, and images. Docker provides the simplest setup.
+
+Edit any prompt to refine a model's response. The bot will generate a new response using your edited prompt, replacing the previous one. Edits and deletions in Discord sync immediately with the conversation cache and update the model's context for future responses.
+
+Conversations are stored in `bot_cache.json` and persist across Docker container restarts with a [**bash script**](https://github.com/jake83741/vnc-lm/blob/main/src/managers/cache/entrypoint.sh).
+
+While both hosted APIs and Ollama support vision functionality, not all models have vision capabilities.
+
+> [!NOTE]  
+> Message `stop` to end message generation early.
+
+### ollama Integration
+
+Download ollama models by sending a model tag link in a channel.
 
 ```console
 # model tag link examples
@@ -76,21 +92,6 @@ Local models can be removed with the `remove` parameter of `/model`.
 
 > [!NOTE]  
 > Enable model downloading and removal by adding your Discord user ID to the `.env`.
-
-Reply `_` to any message in a thread to create a new branch of the conversation. The new branch will include a relationship diagram and conversation summary up to the point where it branched. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
-
-
-#### QoL Improvements
-Long messages are automatically split into pages during generation. Message streaming works with ollama, while hosted APIs handle responses without streaming. The context window supports text files, links, and images. Docker provides the simplest setup.
-
-Edit any prompt to refine a model's response. The bot will generate a new response using your edited prompt, replacing the previous one. Edits and deletions in Discord sync immediately with the conversation cache and update the model's context for future responses.
-
-Conversations are stored in `bot_cache.json` and persist across Docker container restarts with a [**bash script**](https://github.com/jake83741/vnc-lm/blob/main/src/managers/cache/entrypoint.sh).
-
-While both hosted APIs and Ollama support vision functionality, not all models have vision capabilities.
-
-> [!NOTE]  
-> Message `stop` to end message generation early.
 
 ### LiteLLM Integration
 
