@@ -68,7 +68,7 @@ Edit any prompt to refine a model's response. The bot will generate a new respon
 
 Conversations are stored in `bot_cache.json` and persist across Docker container restarts with a [**bash script**](https://github.com/jake83741/vnc-lm/blob/main/src/managers/cache/entrypoint.sh).
 
-Images can be sent to models with vision support. Keep in mind that not all models have vision capabilities.
+Images can be sent to multi-modal models.
 
 > [!NOTE]  
 > Message `stop` to end message generation early.
