@@ -68,12 +68,11 @@ Edit any prompt to refine a model's response. The bot will generate a new respon
 
 Conversations are stored in `bot_cache.json` and persist across Docker container restarts with a [**bash script**](https://github.com/jake83741/vnc-lm/blob/main/src/managers/cache/entrypoint.sh).
 
-> [!NOTE]  
-> Message `stop` to end message generation early.
-
 ### ollama Integration
 
 The `num_ctx` parameter for `/model` can only be used with ollama models.
+
+Message `stop` to end message generation early.
 
 Download ollama models by sending a model tag link in a channel.
 
