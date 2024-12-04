@@ -3,7 +3,7 @@
 ### Introduction
 Message with Claude 3.5 Sonnet, Llama 3.2, GPT-4o, and others through Discord.
  
-Load and configure language models through [**ollama**](https://github.com/ollama/ollama) or any API supported by [**LiteLLM**](https://www.litellm.ai/). Configure model parameters, branch conversations, and edit prompts to improve responses.
+vnc-lm is a discord bot for loading and configuring language models through [**ollama**](https://github.com/ollama/ollama) or any API supported by [**LiteLLM**](https://www.litellm.ai/). Configure model parameters, branch conversations, and edit prompts to improve responses.
 
 <details><summary>Supported Providers</summary> <br>
  
