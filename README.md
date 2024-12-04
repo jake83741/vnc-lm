@@ -153,7 +153,7 @@ model_list:
 ```
 <sub> [Additional parameters may be required](https://github.com/jake83741/vnc-lm/blob/a902b22c616e6ae2958a54ca230725c358068722/litellm_config.yaml) </sub>
 
-### Docker Installation (Preferred)
+### Docker Installation
 ```console
 # build the container with Docker
 docker compose up --build --no-color
