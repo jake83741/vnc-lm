@@ -51,7 +51,8 @@ Local models can be removed with the `remove` parameter of `/model`.
 /model model:granite3-dense:8b-instruct-q8_0 remove:True
 ```
 
-> 💡 Model downloading and removal is turned off by default and can be enabled by configuring the `.env`.
+> [!NOTE]  
+> Model downloading and removal is turned off by default and can be enabled by configuring the `.env`.
 
 Reply `_` to any message in a thread to create a new branch of the conversation. The new branch will include a relationship diagram and conversation summary up to the point where it branched. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
 
@@ -65,7 +66,8 @@ Conversations are stored in `bot_cache.json` and persist across Docker container
 
 While both hosted APIs and Ollama support vision functionality, not all models have vision capabilities.
 
-> 💡 Message `stop` to end message generation early.
+> [!NOTE]  
+> Message `stop` to end message generation early.
 
 ### LiteLLM Integration
 
@@ -137,7 +139,8 @@ docker compose up --build --no-color
 ![Screen Recording 2024-11-24 at 12 51 26 PM](https://github.com/user-attachments/assets/57f207db-ffec-4745-b5e3-784db59564aa)
 <sub>successful build</sub>
 
-> 💡 Send `/help` for instructions on how to use the bot.
+> [!NOTE]  
+> Send `/help` for instructions on how to use the bot.
 
 ### Tree Diagram
 ```console
