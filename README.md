@@ -132,7 +132,7 @@ USE_VISION=
 
 # leave blank to not use ollama
 OLLAMAURL=http://host.docker.internal:11434
-# example provider api key. include as many as necessary.
+# example provider api keys
 OPENAI_API_KEY=sk-...8YIH
 ANTHROPIC_API_KEY=sk-...2HZF
 ```
