@@ -1,7 +1,7 @@
 # vnc-lm
 
 ### Introduction
-Message with Claude 3.5 Sonnet, Llama 3.2, GPT-4o, and others through Discord. 
+Message with Claude 3.5 Sonnet, Llama 3.2, GPT-4o, and others through Discord. Integrated with ollama and LiteLLM.
  
 Load and manage language models through a local [**ollama**](https://github.com/ollama/ollama) instance or hosted APIs with [**LiteLLM**](https://www.litellm.ai/). Configure model parameters, pull conversations, and refine prompts to improve responses.
 
