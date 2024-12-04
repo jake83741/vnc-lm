@@ -3,7 +3,7 @@
 ### Introduction
 Message with Claude 3.5 Sonnet, Llama 3.2, GPT-4o, and other LLMs through Discord.
  
-vnc-lm is a Discord bot for loading and configuring language models. Configure model parameters, branch conversations, and edit prompts to improve responses. It is integrated with the [**ollama**](https://github.com/ollama/ollama) API and the [**LiteLLM**](https://www.litellm.ai/) API. LiteLLM allows this bot to be used with most LLM APIs, see the full list below. 
+vnc-lm is a Discord bot for loading and configuring language models. Configure model parameters, branch conversations, and edit prompts to improve responses. It is integrated with the [**ollama**](https://github.com/ollama/ollama) and [**LiteLLM**](https://www.litellm.ai/) API. LiteLLM helps the bot communicate with most LLM APIs, see the full list below. 
 
 
 <details><summary>Supported Providers</summary> <br>
