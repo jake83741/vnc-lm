@@ -187,12 +187,9 @@ docker compose up --build --no-color
 ```console
 {
   "dependencies": {
-    "@azure-rest/ai-inference": "latest",
-    "@azure/core-auth": "latest",
     "@mozilla/readability": "^0.5.0",
     "@types/xlsx": "^0.0.35",
     "axios": "^1.7.2",
-    "cohere-ai": "^7.14.0",
     "discord.js": "^14.15.3",
     "dotenv": "^16.4.5",
     "jsdom": "^24.1.3",
