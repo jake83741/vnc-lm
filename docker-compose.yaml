@@ -18,7 +18,7 @@ services:
       - litellm
 
   litellm:
-    image: ghcr.io/berriai/litellm:main-latest
+    image: ghcr.io/berriai/litellm:main-stable
     container_name: litellm-proxy
     env_file:
       - .env
