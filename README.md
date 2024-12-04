@@ -257,6 +257,15 @@ model_list:
       api_base: <model-api-base>       
       api_key: api-key                 
 ```
+#### LiteLLM Issues
+If LiteLLM is exiting in the console log when doing `docker compose up --build --no-color`. Open the `docker-compose.yaml` and revise the following line and run `docker compose up --build --no-color` again to see more descriptive logs.
+
+```console
+# original
+command: -c "exec litellm --config /app/config.yaml >/dev/null 2>&1"
+# revised
+command: -c "exec litellm --config /app/config.yaml"
+```
 
 </details>
 
