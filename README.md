@@ -3,7 +3,7 @@
 ### Introduction
 Message with Claude 3.5 Sonnet, Llama 3.2, GPT-4o, and others through Discord.
  
-Load and configure language models through [**ollama**](https://github.com/ollama/ollama) or through several popular hosted and local APIs with [**LiteLLM**](https://www.litellm.ai/). Configure model parameters, branch conversations, and edit prompts to improve responses.
+Load and configure language models through [**ollama**](https://github.com/ollama/ollama) or any [**LiteLLM**](https://www.litellm.ai/) compatible API. Configure model parameters, branch conversations, and edit prompts to improve responses.
 
 ![Screen Recording 2024-11-24 at 10 06 53 PM](https://github.com/user-attachments/assets/9bd73334-74e0-40dd-b17b-a17353b17d63)
 <sub>conversation branching</sub>
