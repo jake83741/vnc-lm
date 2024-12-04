@@ -73,6 +73,8 @@ Conversations are stored in `bot_cache.json` and persist across Docker container
 
 ### ollama Integration
 
+The `num_ctx` parameter for `/model` can only be used with ollama models.
+
 Download ollama models by sending a model tag link in a channel.
 
 ```console
@@ -235,12 +237,23 @@ docker compose up --build --no-color
 
 </details>
 
-### Notes
+### Troubleshooting
 <details>
 <br>
+1. When sending text files to a local model, be sure to set proportional `num_ctx` value with `/model`. <br>
+2. When adding a model to `litellm_config.yaml` from a service that uses a local API (text-generation-webui for example), use this example: <br>
 
-1. The `num_ctx` parameter is strictly for local models.
-2. Set higher `num_ctx` values when using attachments with large amounts of text.
+```console
+# add openai/ prefix to route as OpenAI provider
+# add api base, use host.docker.interal:{port}/v1
+# api key to send your model. use a placeholder when the service doesn't use api keys
+model_list:
+  - model_name: my-model
+    litellm_params:
+      model: openai/<your-model-name>
+      api_base: <model-api-base>       
+      api_key: api-key                 
+```
 
 </details>
 
