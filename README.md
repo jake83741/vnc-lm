@@ -97,6 +97,8 @@ Local models can be removed with the `remove` parameter of `/model`.
 
 With [**LiteLLM**](https://www.litellm.ai/) integration, a wide range of language model APIs can be accessed through a single proxy interface. Any model provider available through LiteLLM is supported. 
 
+LiteLLM includes support for OpenAI-compatible APIs. This opens up support for many popular open source local LLM services.
+
 Add models by filling out `litellm_config.yaml` file in the `vnc-lm/` directory. The configuration supports all providers and parameters available through LiteLLM's proxy.
 
 LiteLLM is packaged with the bot and starts automatically when the Docker container is built. While LiteLLM integration is available, the bot can function solely with ollama.
