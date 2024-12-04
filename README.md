@@ -239,9 +239,12 @@ docker compose up --build --no-color
 
 ### Troubleshooting
 <details>
-<br>
-1. When sending text files to a local model, be sure to set proportional `num_ctx` value with `/model`. <br>
-2. When adding a model to `litellm_config.yaml` from a service that uses a local API (text-generation-webui for example), use this example: <br>
+
+#### Context Window Issues
+When sending text files to a local model, be sure to set proportional `num_ctx` value with `/model`. <br>
+
+#### OpenAI-Compatible APIs
+When adding a model to `litellm_config.yaml` from a service that uses a local API (text-generation-webui for example), use this example: <br>
 
 ```console
 # add openai/ prefix to route as OpenAI provider
