@@ -243,7 +243,7 @@ docker compose up --build --no-color
 #### Context Window Issues
 When sending text files to a local model, be sure to set a proportional `num_ctx` value with `/model`. <br>
 
-#### OpenAI-Compatible APIs
+#### OpenAI-Compatible API Issues
 When adding a model to the `litellm_config.yaml` from a service that uses a local API ([**text-generation-webui**](https://github.com/oobabooga/text-generation-webui) for example), use this example: <br>
 
 ```console
@@ -266,6 +266,9 @@ command: -c "exec litellm --config /app/config.yaml >/dev/null 2>&1"
 # revised
 command: -c "exec litellm --config /app/config.yaml"
 ```
+
+#### Cache issues
+Cache issues are rare and difficult to reproduce but if one does occur, deleting `bot_cache.json` and re-building the bot should correct it. 
 
 </details>
 
