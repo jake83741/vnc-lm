@@ -52,7 +52,7 @@ Local models can be removed with the `remove` parameter of `/model`.
 ```
 
 > [!NOTE]  
-> Enable model downloading and removal by adding your Discord user ID to the `.env`
+> Enable model downloading and removal by adding your Discord user ID to the `.env`.
 
 Reply `_` to any message in a thread to create a new branch of the conversation. The new branch will include a relationship diagram and conversation summary up to the point where it branched. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
 
