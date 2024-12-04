@@ -141,8 +141,6 @@ ANTHROPIC_API_KEY=sk-...2HZF
 ```console
 # add models to the litellm_config.yaml
 # it is not necessary to include ollama models here
-# use host.docker.internal when using localhost APIs
-# model list example
 model_list:
 - model_name: gpt-3.5-turbo-instruct
   litellm_params:
