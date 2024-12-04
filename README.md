@@ -46,6 +46,11 @@ https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/blob/main/Llama-3.2-
 
 Local models can be removed with the `remove` parameter of `/model`. 
 
+```console
+# ollama model removal example
+/model model:granite3-dense:8b-instruct-q8_0 remove:True
+```
+
 > 💡 Model downloading and removal is turned off by default and can be enabled by configuring the `.env`.
 
 Reply `_` to any message in a thread to create a new branch of the conversation. The new branch will include a relationship diagram and conversation summary up to the point where it branched. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
