@@ -9,19 +9,23 @@ Load and configure language models through [**ollama**](https://github.com/ollam
  
 | Supported Providers |||
 |----------|----------|----------|
-| [**OpenAI**](https://docs.litellm.ai/docs/providers/openai) | [**Huggingface**](https://docs.litellm.ai/docs/providers/huggingface) | [**Deepseek**](https://docs.litellm.ai/docs/providers/deepseek) |
-| [**OpenAI-Compatible Endpoints**](https://docs.litellm.ai/docs/providers/openai_compatible) | [**Databricks**](https://docs.litellm.ai/docs/providers/databricks) | [**VLLM**](https://docs.litellm.ai/docs/providers/vllm) |
-| [**Azure OpenAI**](https://docs.litellm.ai/docs/providers/azure) | [**IBM watsonx.ai**](https://docs.litellm.ai/docs/providers/watsonx) | [**Xinference**](https://docs.litellm.ai/docs/providers/xinference) |
-| [**Azure AI Studio**](https://docs.litellm.ai/docs/providers/azure_ai) | [**Nvidia NIM**](https://docs.litellm.ai/docs/providers/nvidia_nim) | [**Cloudflare Workers AI**](https://docs.litellm.ai/docs/providers/cloudflare_workers) |
-| [**VertexAI**](https://docs.litellm.ai/docs/providers/vertex) | [**XAI**](https://docs.litellm.ai/docs/providers/xai) | [**DeepInfra**](https://docs.litellm.ai/docs/providers/deepinfra) |
-| [**Gemini - Google AI Studio**](https://docs.litellm.ai/docs/providers/gemini) | [**LM Studio**](https://docs.litellm.ai/docs/providers/lm_studio) | [**AI21**](https://docs.litellm.ai/docs/providers/ai21) |
-| [**Anthropic**](https://docs.litellm.ai/docs/providers/anthropic) | [**Cerebras**](https://docs.litellm.ai/docs/providers/cerebras) | [**NLP Cloud**](https://docs.litellm.ai/docs/providers/nlp_cloud) |
-| [**AWS Sagemaker**](https://docs.litellm.ai/docs/providers/aws_sagemaker) | [**Volcano Engine**](https://docs.litellm.ai/docs/providers/volcano) | [**Replicate**](https://docs.litellm.ai/docs/providers/replicate) |
-| [**AWS Bedrock**](https://docs.litellm.ai/docs/providers/bedrock) | [**Triton Inference Server**](https://docs.litellm.ai/docs/providers/triton-inference-server) | [**Together AI**](https://docs.litellm.ai/docs/providers/togetherai) |
-| [**Mistral AI API**](https://docs.litellm.ai/docs/providers/mistral) | [**Ollama**](https://docs.litellm.ai/docs/providers/ollama) | [**Jina AI**](https://docs.litellm.ai/docs/providers/jina_ai) |
-| [**Codestral API**](https://docs.litellm.ai/docs/providers/codestral) | [**Perplexity AI**](https://docs.litellm.ai/docs/providers/perplexity) | [**OpenRouter**](https://docs.litellm.ai/docs/providers/openrouter) |
-| [**Cohere**](https://docs.litellm.ai/docs/providers/cohere) | [**Groq**](https://docs.litellm.ai/docs/providers/groq) | [**Sambanova**](https://docs.litellm.ai/docs/providers/sambanova) |
-| [**Anyscale**](https://docs.litellm.ai/docs/providers/anyscale) | [**Github**](https://docs.litellm.ai/docs/providers/github) |
+| [**OpenAI**](https://docs.litellm.ai/docs/providers/openai) | [**Huggingface**](https://docs.litellm.ai/docs/providers/huggingface) | [**Cloudflare Workers AI**](https://docs.litellm.ai/docs/providers/cloudflare_workers) |
+| [**OpenAI (Text Completion)**](https://docs.litellm.ai/docs/providers/text_completion_openai) | [**Databricks**](https://docs.litellm.ai/docs/providers/databricks) | [**DeepInfra**](https://docs.litellm.ai/docs/providers/deepinfra) |
+| [**OpenAI-Compatible Endpoints**](https://docs.litellm.ai/docs/providers/openai_compatible) | [**IBM watsonx.ai**](https://docs.litellm.ai/docs/providers/watsonx) | [**AI21**](https://docs.litellm.ai/docs/providers/ai21) |
+| [**Azure OpenAI**](https://docs.litellm.ai/docs/providers/azure) | [**Predibase**](https://docs.litellm.ai/docs/providers/predibase) | [**NLP Cloud**](https://docs.litellm.ai/docs/providers/nlp_cloud) |
+| [**Azure AI Studio**](https://docs.litellm.ai/docs/providers/azure_ai) | [**Nvidia NIM**](https://docs.litellm.ai/docs/providers/nvidia_nim) | [**Replicate**](https://docs.litellm.ai/docs/providers/replicate) |
+| [**VertexAI**](https://docs.litellm.ai/docs/providers/vertex) | [**XAI**](https://docs.litellm.ai/docs/providers/xai) | [**Together AI**](https://docs.litellm.ai/docs/providers/togetherai) |
+| [**Gemini - Google AI Studio**](https://docs.litellm.ai/docs/providers/gemini) | [**LM Studio**](https://docs.litellm.ai/docs/providers/lm_studio) | [**Voyage AI**](https://docs.litellm.ai/docs/providers/voyage) |
+| [**Anthropic**](https://docs.litellm.ai/docs/providers/anthropic) | [**Cerebras**](https://docs.litellm.ai/docs/providers/cerebras) | [**Jina AI**](https://docs.litellm.ai/docs/providers/jina_ai) |
+| [**AWS Sagemaker**](https://docs.litellm.ai/docs/providers/aws_sagemaker) | [**Volcano Engine**](https://docs.litellm.ai/docs/providers/volcano) | [**Aleph Alpha**](https://docs.litellm.ai/docs/providers/aleph_alpha) |
+| [**AWS Bedrock**](https://docs.litellm.ai/docs/providers/bedrock) | [**Triton Inference Server**](https://docs.litellm.ai/docs/providers/triton-inference-server) | [**Baseten**](https://docs.litellm.ai/docs/providers/baseten) |
+| [**LiteLLM Proxy (LLM Gateway)**](https://docs.litellm.ai/docs/providers/litellm_proxy) | [**Ollama**](https://docs.litellm.ai/docs/providers/ollama) | [**OpenRouter**](https://docs.litellm.ai/docs/providers/openrouter) |
+| [**Mistral AI API**](https://docs.litellm.ai/docs/providers/mistral) | [**Perplexity AI**](https://docs.litellm.ai/docs/providers/perplexity) | [**PaLM API - Google**](https://docs.litellm.ai/docs/providers/palm) |
+| [**Codestral API**](https://docs.litellm.ai/docs/providers/codestral) | [**FriendliAI**](https://docs.litellm.ai/docs/providers/friendliai) | [**Sambanova**](https://docs.litellm.ai/docs/providers/sambanova) |
+| [**Cohere**](https://docs.litellm.ai/docs/providers/cohere) | [**Groq**](https://docs.litellm.ai/docs/providers/groq) | [**Custom API Server**](https://docs.litellm.ai/docs/providers/custom_llm_server) |
+| [**Anyscale**](https://docs.litellm.ai/docs/providers/anyscale) | [**Github**](https://docs.litellm.ai/docs/providers/github) | [**Petals**](https://docs.litellm.ai/docs/providers/petals) |
+| [**Fireworks AI**](https://docs.litellm.ai/docs/providers/fireworks_ai) | [**Deepseek**](https://docs.litellm.ai/docs/providers/deepseek) | [**Xinference**](https://docs.litellm.ai/docs/providers/xinference) |
+| [**Clarifai**](https://docs.litellm.ai/docs/providers/clarifai) | [**VLLM**](https://docs.litellm.ai/docs/providers/vllm) |
 
 </details>
 
