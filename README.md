@@ -30,7 +30,6 @@ vnc-lm is a Discord bot for loading and configuring language models through [**o
 </details>
 
 ![Screen Recording 2024-11-24 at 10 06 53 PM](https://github.com/user-attachments/assets/9bd73334-74e0-40dd-b17b-a17353b17d63)
-<sub>conversation branching</sub>
 <br>
 
 ### Features
