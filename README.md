@@ -22,6 +22,8 @@ Load models using the `/model` command. Configure model behavior by adjusting th
 The bot creates a new thread upon successful model loading and sends a confirmation notification. The `/model` command only works in main channels, not threads. Thread names are automatically generated from keywords in your initial prompt. To switch models within a thread, use `+` followed by any distinctive part of the model name:
 
 ```console
+# model switching examples
+
 # switch to claude-sonnet-3.5
 + claude, + sonnet, + 3.5
 
@@ -37,9 +39,8 @@ When you switch models within a thread, your conversation history and settings (
 Download models by sending a model tag link in a channel.
 
 ```console
-# model tag links
+# model tag link examples
 https://ollama.com/library/llama3.2:1b-instruct-q8_0
-
 https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/blob/main/Llama-3.2-1B-Instruct-Q8_0.gguf
 ```
 
