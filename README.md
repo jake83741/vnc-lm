@@ -240,6 +240,9 @@ docker compose up --build --no-color
 #### Context Window Issues
 When sending text files to a local model, be sure to set a proportional `num_ctx` value with `/model`. <br>
 
+#### Discord API issues
+Occasionally the Discord API will throw up errors in the console 
+
 #### OpenAI-Compatible API Issues
 When adding a model to the `litellm_config.yaml` from a service that uses a local API ([**text-generation-webui**](https://github.com/oobabooga/text-generation-webui) for example), use this example: <br>
 
