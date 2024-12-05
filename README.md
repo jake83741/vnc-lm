@@ -241,9 +241,10 @@ docker compose up --build --no-color
 When sending text files to a local model, be sure to set a proportional `num_ctx` value with `/model`. <br>
 
 #### Discord API issues
-Occasionally the Discord API will throw up errors in the console such as:
+Occasionally the Discord API will send errors in the console.
 
 ```console
+# discord api error examples
 DiscordAPIError[10062]: Unknown interaction
 
 DiscordAPIError[40060]: Interaction has already been acknowledged
