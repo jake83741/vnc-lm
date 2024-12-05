@@ -214,17 +214,17 @@ docker compose up --build --no-color
 {
   "dependencies": {
     "@mozilla/readability": "^0.5.0",
-    "@types/xlsx": "^0.0.35",
     "axios": "^1.7.2",
     "discord.js": "^14.15.3",
     "dotenv": "^16.4.5",
     "jsdom": "^24.1.3",
     "keyword-extractor": "^0.0.27",
-    "puppeteer": "^22.14.0",
     "sharp": "^0.33.5",
     "tesseract.js": "^5.1.0"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/dotenv": "^8.2.0",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^18.15.25",
     "typescript": "^5.1.3"
