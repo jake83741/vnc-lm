@@ -39,7 +39,7 @@ Load models using the `/model` command. Configure model behavior by adjusting th
 
 ```console
 # model loading / configuration example
-/model model:command-r-plus-08-2024 system_prompt: You are a helpful assistant. temperature: 0.4
+/model model:granite3-dense:8b-instruct-q8_0 system_prompt: You are a helpful assistant. temperature: 0.4
 ```
 
 The bot creates a new thread upon successful model loading and sends a confirmation notification. The `/model` command only works in main channels, not threads. Thread names are automatically generated from keywords in your initial prompt. To switch models within a thread, use `+` followed by any distinctive part of the model name:
