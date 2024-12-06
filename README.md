@@ -62,7 +62,7 @@ When you switch models within a thread, your conversation history and settings (
 Reply `_` to any message in a thread to create a new branch of the conversation. The new branch will include a relationship diagram and a conversation summary up to the point where it branched. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
 
 #### QoL Improvements
-Long messages are automatically split into pages. The context window supports text files, links, and images. 
+Long messages are automatically split into pages. The context window supports text files, links, and images. Images can be handled either with multi-modal models or with OCR depending on how the `.env` is configured. The bot can be configured to require mention or to respond without a direct mention.
 
 Edit any prompt to refine a model's response. The bot will generate a new response using your edited prompt, replacing the previous one. Edits and deletions in Discord sync immediately with the conversation cache and update the model's context for future responses. Conversations are stored in `bot_cache.json` and persist across Docker container restarts with a [**bash script**](https://github.com/jake83741/vnc-lm/blob/main/src/managers/cache/entrypoint.sh).
 
