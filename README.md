@@ -42,7 +42,7 @@ Load models using the `/model` command. Configure model behavior by adjusting th
 /model model:granite3-dense:8b-instruct-q8_0 system_prompt: You are a helpful assistant. temperature: 0.4
 ```
 
-The bot creates a new thread upon successful model loading and sends a confirmation notification. The `/model` command only works in main channels, not threads. Thread names are automatically generated from keywords in your initial prompt. To switch models within a thread, use `+` followed by any distinctive part of the model name:
+The bot creates a new thread upon successful model loading and sends a confirmation notification. To switch models within a thread, use `+` followed by any distinctive part of the model name:
 
 ```console
 # model switching examples
@@ -57,20 +57,16 @@ The bot creates a new thread upon successful model loading and sends a confirmat
 + granite, + dense
 ```
 
-When you switch models within a thread, your conversation history and settings (`system_prompt` and `temperature`) stay unchanged. Resume any conversation by sending a new message.
+When you switch models within a thread, your conversation history and settings (`system_prompt` and `temperature`) stay unchanged.
 
-Reply `_` to any message in a thread to create a new branch of the conversation. The new branch will include a relationship diagram and conversation summary up to the point where it branched. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
+Reply `_` to any message in a thread to create a new branch of the conversation. The new branch will include a relationship diagram and a conversation summary up to the point where it branched. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
 
 #### QoL Improvements
-Long messages are automatically split into pages during generation. The context window supports text files, links, and images. Docker provides the simplest setup.
+Long messages are automatically split into pages. The context window supports text files, links, and images. 
 
-Edit any prompt to refine a model's response. The bot will generate a new response using your edited prompt, replacing the previous one. Edits and deletions in Discord sync immediately with the conversation cache and update the model's context for future responses.
-
-Conversations are stored in `bot_cache.json` and persist across Docker container restarts with a [**bash script**](https://github.com/jake83741/vnc-lm/blob/main/src/managers/cache/entrypoint.sh).
+Edit any prompt to refine a model's response. The bot will generate a new response using your edited prompt, replacing the previous one. Edits and deletions in Discord sync immediately with the conversation cache and update the model's context for future responses. Conversations are stored in `bot_cache.json` and persist across Docker container restarts with a [**bash script**](https://github.com/jake83741/vnc-lm/blob/main/src/managers/cache/entrypoint.sh).
 
 ### ollama Integration
-
-The `num_ctx` parameter for `/model` can only be used with ollama models.
 
 Download ollama models by sending a model tag link in a channel.
 
@@ -89,6 +85,8 @@ Local models can be removed with the `remove` parameter of `/model`.
 
 > [!NOTE]  
 > Enable model downloading and removal by adding your Discord user ID to the `.env`.
+
+The `num_ctx` parameter for `/model` can only be used with ollama models. 
 
 ### LiteLLM Integration
 
