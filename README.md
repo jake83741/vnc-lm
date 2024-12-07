@@ -103,7 +103,7 @@ LiteLLM is packaged with the bot and starts automatically when the Docker contai
 
 ### Environment Configuration
 ```console
-# clone the repository
+# clone the repository or download a recent release
 git clone https://github.com/jake83741/vnc-lm.git
 
 # enter the directory
