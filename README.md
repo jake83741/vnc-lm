@@ -250,8 +250,6 @@ DiscordAPIError[40060]: Interaction has already been acknowledged
 
 The errors usually seem to be related to clicking through pages of an embedded response. The errors are not critical and should not cause the bot to crash. 
 
-If you receive the error message `The model ${modelName} was not found in the model directory` when creating threads using `/model`, you'll need to refresh your Discord bot token.
-
 #### OpenAI-Compatible API Issues
 When adding a model to the `litellm_config.yaml` from a service that uses a local API ([**text-generation-webui**](https://github.com/oobabooga/text-generation-webui) for example), use this example: <br>
 
