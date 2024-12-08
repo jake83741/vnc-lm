@@ -29,7 +29,7 @@ Message with Claude 3.5 Sonnet, Llama 3.3, GPT-4o, and other LLMs through Discor
 
 </details>
 
-![Screen Recording 2024-12-07 at 8 31 46 PM](https://github.com/user-attachments/assets/bdad6178-b198-4f73-987c-ac47307c169d)
+![Screen Recording 2024-12-07 at 8 39 09 PM](https://github.com/user-attachments/assets/21bcc7f2-dda8-4bcb-80df-40aed5c812b5)
 <br>
 
 ### Features
