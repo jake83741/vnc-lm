@@ -1,7 +1,7 @@
 # vnc-lm
 
 [![Docker](https://img.shields.io/badge/docker-required-006fdf?logo=docker&logoColor=white)](https://www.docker.com/) <br>
-[![Ollama](https://img.shields.io/badge/ollama-integrated-909497)](https://ollama.com/)
+[![Ollama](https://img.shields.io/badge/ollama-integrated-909497)](https://ollama.com/) <br>
 [![LiteLLM](https://img.shields.io/badge/LiteLLM-integrated-909497)](https://www.litellm.ai/)
 
 ### Introduction
