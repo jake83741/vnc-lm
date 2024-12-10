@@ -3,7 +3,7 @@
 ### Introduction
 Message with Claude 3.5 Sonnet, Llama 3.3, GPT-4o, and other LLMs through Discord.
  
-**vnc-lm** is a Discord bot for messaging with language models. Configure model parameters, branch conversations, and edit prompts to improve responses. It is integrated with [**ollama**](https://github.com/ollama/ollama) and [**LiteLLM**](https://www.litellm.ai/).
+**vnc-lm** is a Discord bot for messaging with language models. Configure model parameters, branch conversations, and edit prompts to improve responses. It is integrated with [ollama](https://github.com/ollama/ollama) and [LiteLLM](https://www.litellm.ai/).
 
 <details><summary>Supported Providers</summary> <br>
  
@@ -64,7 +64,7 @@ Reply `branch` to any message in a thread to create a new branch of the conversa
 #### QoL Improvements
 Long messages are automatically split into pages. The context window supports text files, links, and images. Images can be handled either with multi-modal models or with OCR depending on how the `.env` is configured. The bot can be configured to require mention or to respond without a direct mention.
 
-Edit any prompt to refine a model's response. The bot will generate a new response using your edited prompt, replacing the previous one. Edits and deletions in Discord sync immediately with the conversation cache and update the model's context for future responses. Conversations are stored in `bot_cache.json` and persist across Docker container restarts with a [**bash script**](https://github.com/jake83741/vnc-lm/blob/main/src/managers/cache/entrypoint.sh).
+Edit any prompt to refine a model's response. The bot will generate a new response using your edited prompt, replacing the previous one. Edits and deletions in Discord sync immediately with the conversation cache and update the model's context for future responses. Conversations are stored in `bot_cache.json` and persist across Docker container restarts with a [bash script](https://github.com/jake83741/vnc-lm/blob/main/src/managers/cache/entrypoint.sh).
 
 ### ollama Integration
 
@@ -90,7 +90,7 @@ The `num_ctx` parameter for `/model` can only be used with ollama models.
 
 ### LiteLLM Integration
 
-With [**LiteLLM**](https://www.litellm.ai/) integration, a wide range of language model APIs can be accessed through a single proxy interface. Any model provider available through LiteLLM is supported. 
+With [LiteLLM](https://www.litellm.ai/) integration, a wide range of language model APIs can be accessed through a single proxy interface. Any model provider available through LiteLLM is supported. 
 
 LiteLLM includes support for OpenAI-compatible APIs. This opens up support for many popular open source local LLM services.
 
@@ -99,7 +99,7 @@ Add models by filling out `litellm_config.yaml` file in the `vnc-lm/` directory.
 LiteLLM is packaged with the bot and starts automatically when the Docker container is built. While LiteLLM integration is available, the bot can function solely with ollama.
 
 ### Requirements 
-[**Docker**](https://www.docker.com/): Docker is a platform designed to help developers build, share, and run container applications. We handle the tedious setup, so you can focus on the code.
+[Docker](https://www.docker.com/): Docker is a platform designed to help developers build, share, and run container applications. We handle the tedious setup, so you can focus on the code.
 
 ### Environment Configuration
 ```shell
@@ -241,7 +241,7 @@ DiscordAPIError[40060]: Interaction has already been acknowledged
 The errors usually seem to be related to clicking through pages of an embedded response. The errors are not critical and should not cause the bot to crash. 
 
 #### OpenAI-Compatible API Issues
-When adding a model to the `litellm_config.yaml` from a service that uses a local API ([**text-generation-webui**](https://github.com/oobabooga/text-generation-webui) for example), use this example: <br>
+When adding a model to the `litellm_config.yaml` from a service that uses a local API ([text-generation-webui](https://github.com/oobabooga/text-generation-webui) for example), use this example: <br>
 
 ```shell
 # add openai/ prefix to route as OpenAI provider
@@ -264,7 +264,7 @@ command: -c "exec litellm --config /app/config.yaml >/dev/null 2>&1"
 command: -c "exec litellm --config /app/config.yaml"
 ```
 
-Most issues will be related to the `litellm_config.yaml` file. Double check your model_list vs the examples shown in the [**LiteLLM docs**](https://docs.litellm.ai/docs/providers). Some providers require [**additional litellm_params**](https://github.com/jake83741/vnc-lm/blob/a902b22c616e6ae2958a54ca230725c358068722/litellm_config.yaml).
+Most issues will be related to the `litellm_config.yaml` file. Double check your model_list vs the examples shown in the [LiteLLM docs](https://docs.litellm.ai/docs/providers). Some providers require [additional litellm_params](https://github.com/jake83741/vnc-lm/blob/a902b22c616e6ae2958a54ca230725c358068722/litellm_config.yaml).
 
 #### Cache issues
 Cache issues are rare and difficult to reproduce but if one does occur, deleting `bot_cache.json` and re-building the bot should correct it. 
