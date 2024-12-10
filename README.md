@@ -37,14 +37,14 @@ Message with Claude 3.5 Sonnet, Llama 3.3, GPT-4o, and other LLMs through Discor
 
 Load models using the `/model` command. Configure model behavior by adjusting the `system_prompt` (base instructions), `temperature` (response randomness), and `num_ctx` (context length) parameters. 
 
-```console
+```shell
 # model loading / configuration example
 /model model:granite3-dense:8b-instruct-q8_0 system_prompt: You are a helpful assistant. temperature: 0.4
 ```
 
 The bot creates a new thread upon successful model loading and sends a confirmation notification. To switch models within a thread, use `+` followed by any distinctive part of the model name:
 
-```console
+```shell
 # model switching examples
 
 # switch to claude-sonnet-3.5
@@ -70,7 +70,7 @@ Edit any prompt to refine a model's response. The bot will generate a new respon
 
 Download ollama models by sending a model tag link in a channel.
 
-```console
+```shell
 # model tag link examples
 https://ollama.com/library/llama3.2:1b-instruct-q8_0
 https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/blob/main/Llama-3.2-1B-Instruct-Q8_0.gguf
@@ -78,7 +78,7 @@ https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/blob/main/Llama-3.2-
 
 Local models can be removed with the `remove` parameter of `/model`. 
 
-```console
+```shell
 # ollama model removal example
 /model model:granite3-dense:8b-instruct-q8_0 remove:True
 ```
@@ -102,7 +102,7 @@ LiteLLM is packaged with the bot and starts automatically when the Docker contai
 [**Docker**](https://www.docker.com/): Docker is a platform designed to help developers build, share, and run container applications. We handle the tedious setup, so you can focus on the code.
 
 ### Environment Configuration
-```console
+```shell
 # clone the repository or download a recent release
 git clone https://github.com/jake83741/vnc-lm.git
 
@@ -115,7 +115,7 @@ mv .env.example .env
 
 ----
 
-```console
+```shell
 # configure the below .env fields
 
 # Discord bot token
@@ -136,7 +136,7 @@ ANTHROPIC_API_KEY=sk-...2HZF
 ```
 
 ### LiteLLM configuration
-```console
+```shell
 # add models to the litellm_config.yaml
 # it is not necessary to include ollama models here
 model_list:
@@ -152,7 +152,7 @@ model_list:
 <sub> [Additional parameters may be required](https://github.com/jake83741/vnc-lm/blob/a902b22c616e6ae2958a54ca230725c358068722/litellm_config.yaml) </sub>
 
 ### Docker Installation
-```console
+```shell
 # build the container with Docker
 docker compose up --build --no-color
 ```
@@ -164,41 +164,41 @@ docker compose up --build --no-color
 > Send `/help` for instructions on how to use the bot.
 
 ### Tree Diagram
-```console
+```shell
 .
-├── api-connections
-│   ├── base-client.ts
-│   ├── factory.ts
-│   └── provider
-│       ├── litellm
-│       │   └── client.ts
-│       └── ollama
-│           └── client.ts
-├── bot.ts
-├── commands
-│   ├── base.ts
-│   ├── handlers.ts
-│   └── registry.ts
-├── managers
-│   ├── cache
-│   │   ├── entrypoint.sh
-│   │   ├── manager.ts
-│   │   └── store.ts
-│   └── generation
-│       ├── core.ts
-│       ├── formatter.ts
-│       └── generator.ts
-└── utilities
-    ├── error-handler.ts
-    ├── index.ts
-    └── settings.ts
+├── api-connections/             # Directory for API client implementations
+│   ├── base-client.ts           # Abstract base class defining common client interface and methods
+│   ├── factory.ts               # Factory class for instantiating appropriate model clients
+│   └── provider/                # Model-specific client implementations
+│       ├── litellm/            
+│       │   └── client.ts        # Client implementation for LiteLLM API integration
+│       └── ollama/
+│           └── client.ts        # Client implementation for Ollama API integration
+├── bot.ts                       # Main bot initialization and event handling setup
+├── commands/                    # Command handling and registration
+│   ├── base.ts                  # Base command class with shared command functionality
+│   ├── handlers.ts              # Implementation of individual bot commands
+│   └── registry.ts              # Command registration and slash command setup
+├── managers/                    # Core functionality managers
+│   ├── cache/                   # Conversation and state caching
+│   │   ├── entrypoint.sh        # Cache initialization script
+│   │   ├── manager.ts           # Cache management implementation
+│   │   └── store.ts             # Cache storage and persistence
+│   └── generation/              # Message generation handling
+│       ├── core.ts              # Core message generation logic
+│       ├── formatter.ts         # Message formatting and pagination
+│       └── generator.ts         # Stream-based response generation
+└── utilities/                   # Shared utilities and helpers
+    ├── error-handler.ts         # Global error handling
+    ├── index.ts                 # Central export point for utilities
+    └── settings.ts              # Global settings and configuration
 ```
 
 ### Dependencies
 <details>
 <br>
  
-```console
+```shell
 {
   "dependencies": {
     "@mozilla/readability": "^0.5.0",
