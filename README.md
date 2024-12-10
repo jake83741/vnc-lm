@@ -166,29 +166,29 @@ docker compose up --build --no-color
 ### Tree Diagram
 ```shell
 .
-├── api-connections/             # Directory for API client implementations
+├── api-connections/             
 │   ├── base-client.ts           # Abstract base class defining common client interface and methods
 │   ├── factory.ts               # Factory class for instantiating appropriate model clients
-│   └── provider/                # Model-specific client implementations
+│   └── provider/                
 │       ├── litellm/            
 │       │   └── client.ts        # Client implementation for LiteLLM API integration
 │       └── ollama/
 │           └── client.ts        # Client implementation for Ollama API integration
 ├── bot.ts                       # Main bot initialization and event handling setup
-├── commands/                    # Command handling and registration
+├── commands/                    
 │   ├── base.ts                  # Base command class with shared command functionality
 │   ├── handlers.ts              # Implementation of individual bot commands
 │   └── registry.ts              # Command registration and slash command setup
-├── managers/                    # Core functionality managers
-│   ├── cache/                   # Conversation and state caching
+├── managers/                    
+│   ├── cache/                   
 │   │   ├── entrypoint.sh        # Cache initialization script
 │   │   ├── manager.ts           # Cache management implementation
 │   │   └── store.ts             # Cache storage and persistence
-│   └── generation/              # Message generation handling
+│   └── generation/              
 │       ├── core.ts              # Core message generation logic
 │       ├── formatter.ts         # Message formatting and pagination
 │       └── generator.ts         # Stream-based response generation
-└── utilities/                   # Shared utilities and helpers
+└── utilities/                   
     ├── error-handler.ts         # Global error handling
     ├── index.ts                 # Central export point for utilities
     └── settings.ts              # Global settings and configuration
