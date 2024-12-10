@@ -1,5 +1,10 @@
 # vnc-lm
 
+[![Docker](https://img.shields.io/badge/docker-required-006fdf?logo=docker&logoColor=white)](https://www.docker.com/)
+[![TypeScript](https://img.shields.io/badge/typescript-5.1.3-007acc?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Ollama](https://img.shields.io/badge/ollama-integrated-909497)](https://ollama.com/)
+[![LiteLLM](https://img.shields.io/badge/LiteLLM-integrated-909497)](https://www.litellm.ai/)
+
 ### Introduction
 Message with Claude 3.5 Sonnet, Llama 3.3, GPT-4o, and other LLMs through Discord.
  
