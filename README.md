@@ -231,7 +231,7 @@ When sending text files to a local model, be sure to set a proportional `num_ctx
 #### Discord API issues
 Occasionally the Discord API will throw up errors in the console.
 
-```console
+```shell
 # discord api error examples
 DiscordAPIError[10062]: Unknown interaction
 
@@ -243,7 +243,7 @@ The errors usually seem to be related to clicking through pages of an embedded r
 #### OpenAI-Compatible API Issues
 When adding a model to the `litellm_config.yaml` from a service that uses a local API ([**text-generation-webui**](https://github.com/oobabooga/text-generation-webui) for example), use this example: <br>
 
-```console
+```shell
 # add openai/ prefix to route as OpenAI provider
 # add api base, use host.docker.interal:{port}/v1
 # api key to send your model. use a placeholder when the service doesn't use api keys
@@ -257,7 +257,7 @@ model_list:
 #### LiteLLM Issues
 If LiteLLM is exiting in the console log when doing `docker compose up --build --no-color`. Open the `docker-compose.yaml` and revise the following line and run `docker compose up --build --no-color` again to see more descriptive logs.
 
-```console
+```shell
 # original
 command: -c "exec litellm --config /app/config.yaml >/dev/null 2>&1"
 # revised
