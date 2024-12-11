@@ -59,7 +59,7 @@ The bot creates a new thread upon successful model loading and sends a confirmat
 
 When you switch models within a thread, your conversation history and settings (`system_prompt` and `temperature`) stay unchanged.
 
-Reply `branch` to any message in a thread to create a new branch of the conversation. The new branch will include a relationship diagram and a conversation summary up to the point where it branched. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
+Reply `branch` to any message in a thread to create a new branch of the conversation. The new branch will include a link to the original thread and a conversation summary up to the point where it branched. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
 
 #### QoL Improvements
 Long messages are automatically split into pages. The context window supports text files, links, and images. Images can be handled either with multi-modal models or with OCR depending on how the `.env` is configured. The bot can be configured to require mention or to respond without a direct mention.
