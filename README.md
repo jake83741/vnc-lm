@@ -39,10 +39,10 @@ Load models using the `/model` command. Configure model behavior by adjusting th
 
 ```shell
 # model loading / configuration example
-/model model:command-r-08-2024 system_prompt: You are a helpful assistant. temperature: 0.4
+/model model:command-r-plus-08-2024 system_prompt: You are a helpful assistant. temperature: 0.4
 ```
 
-The bot creates a new thread upon successful model loading and sends a confirmation notification. To switch models within a thread, use `+` followed by any distinctive part of the model name:
+The bot creates a new thread upon successful model loading and sends a confirmation notification. To switch models within a thread, use `+` followed by any distinctive part of the model name.
 
 ```shell
 # model switching examples
