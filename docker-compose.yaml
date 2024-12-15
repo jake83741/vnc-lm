@@ -1,0 +1,40 @@
+services:
+  discord-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./cache:/app/cache
+    command: sh -c "mkdir -p /app/cache && /app/entrypoint.sh"
+    networks:
+      - discord-bot-network
+    depends_on:
+      - litellm
+
+  litellm:
+    image: ghcr.io/berriai/litellm:main-v1.52.14
+    container_name: litellm-proxy
+    env_file:
+      - .env
+    volumes:
+      - ./litellm_config.yaml:/app/config.yaml
+    ports:
+      - "4000:4000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    entrypoint: /bin/sh
+    command: -c "exec litellm --config /app/config.yaml >/dev/null 2>&1"
+    networks:
+      - discord-bot-network
+    logging:
+      driver: "none"
+
+networks:
+  discord-bot-network:
+    driver: bridge
