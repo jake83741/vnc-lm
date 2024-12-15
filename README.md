@@ -49,12 +49,10 @@ The bot creates a new thread upon successful model loading and sends a confirmat
 
 # switch to claude-sonnet-3.5
 + claude, + sonnet, + 3.5
-
+# switch to gemini-2.0-flash-exp
++ gemini, + flash, + exp
 # switch to gpt-4o
 + gpt, + 4o
-
-# switch to granite-dense
-+ granite, + dense
 ```
 
 When you switch models within a thread, your conversation history and settings (`system_prompt` and `temperature`) stay unchanged.
