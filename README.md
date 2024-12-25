@@ -40,7 +40,7 @@ Load models using the `/model` command. Configure model behavior by adjusting th
 ```shell
 # model loading / configuration examples
 
-# loading a model
+# loading a model without configuring it
 /model model:gemini-exp-1206
 # setting system prompt and temperature
 /model model:command-r-plus-08-2024 system_prompt: You are a helpful assistant. temperature: 0.4
