@@ -236,7 +236,7 @@ When sending text files to a local model, be sure to set a proportional `num_ctx
 Occasionally the Discord API will throw up errors in the console.
 
 ```shell
-# discord api error examples
+# Discord api error examples
 DiscordAPIError[10062]: Unknown interaction
 
 DiscordAPIError[40060]: Interaction has already been acknowledged
