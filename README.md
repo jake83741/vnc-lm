@@ -61,12 +61,14 @@ A new thread will be created once the model loads. To switch models within a thr
 + gpt, + 4o
 ```
 
-Reply `branch` to any message in a thread to create a new branch of the conversation. The new branch will include a link to the original thread and a conversation summary . Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
-
 #### QoL Improvements
 Long messages are automatically split into pages. The context window supports text files, links, and images. Images can be handled either with multi-modal models or with OCR depending on how the `.env` is configured. The bot can be configured to require mention or to respond without a direct mention.
 
+
+
 Edit any prompt to refine a model's response. Conversations are stored in `bot_cache.json` and persist across Docker container restarts with a [bash script](https://github.com/jake83741/vnc-lm/blob/main/src/managers/cache/entrypoint.sh).
+
+Reply `branch` to any message in a thread to create a new branch of the conversation. The new branch will include a link to the original thread and a conversation summary . Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
 
 ### ollama Integration
 
