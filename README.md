@@ -45,7 +45,7 @@ Load models using the `/model` command. Configure model behavior by adjusting th
 # setting system prompt and temperature
 /model model:command-r-plus-08-2024 system_prompt: You are a helpful assistant. temperature: 0.4
 # setting num_ctx
-/model model: granite3.1-dense:8b-instruct-q8_0 num_ctx:32000
+/model model:granite3.1-dense:8b-instruct-q8_0 num_ctx:32000
 ```
 
 A new thread will be created once the model loads. To switch models within a thread, use `+` followed by any distinctive part of the model name.
