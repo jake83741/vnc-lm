@@ -42,9 +42,9 @@ Load models using the `/model` command. Configure model behavior by adjusting th
 
 # loading a model without configuring it
 /model model:gemini-exp-1206
-# setting system prompt and temperature
+# loading a model with system prompt and temperature
 /model model:command-r-plus-08-2024 system_prompt: You are a helpful assistant. temperature: 0.4
-# setting num_ctx
+# loading a model with num_ctx
 /model model:granite3.1-dense:8b-instruct-q8_0 num_ctx:32000
 ```
 
