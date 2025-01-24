@@ -61,7 +61,7 @@ A new thread will be created once the model loads. To switch models within a thr
 + claude, + sonnet, + 3.5
 ```
 
-#### Usability 
+#### Message Handling 
 <details><summary>Message Handling</summary>
  
 <br>
