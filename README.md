@@ -1,7 +1,7 @@
 # vnc-lm
 
 ### Introduction
-Message with Claude 3.5 Sonnet, Llama 3.3, Gemini, and other LLMs through Discord.
+Message with DeepSeek, Gemini, Llama 3.3, and other LLMs through Discord.
  
 **vnc-lm** is a Discord bot for messaging with language models. Configure model parameters, branch conversations, and edit prompts to improve responses. It is integrated with [ollama](https://github.com/ollama/ollama) and [LiteLLM](https://github.com/BerriAI/litellm).
 
@@ -53,12 +53,12 @@ A new thread will be created once the model loads. To switch models within a thr
 ```shell
 # model switching examples
 
-# switch to claude-sonnet-3.5
-+ claude, + sonnet, + 3.5
+# switch to deepseek-r1
++ deepseek +r1
 # switch to gemini-2.0-flash-exp
 + gemini, + flash, + exp
-# switch to gpt-4o
-+ gpt, + 4o
+# switch to claude-sonnet-3.5
++ claude, + sonnet, + 3.5
 ```
 
 #### QoL Improvements
