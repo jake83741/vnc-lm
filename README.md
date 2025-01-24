@@ -4,13 +4,14 @@
  
 Configure model parameters to change behavior. Branch conversations to see alternative paths. Edit prompts to improve responses. 
 
-- [x] [OpenAI](https://openai.com/): <sub> GPT-4o, GPT-4o-mini, o1, o1-mini </sub> 
-- [x] [Anthropic](https://www.anthropic.com/): <sub> Claude 3.5 Sonnet, Claude 3.5 Haiku </sub>
-- [x] [Gemini](https://gemini.google.com/app): <sub> Gemini 2.0 Flash Experimental, Gemini Experimental 1206, Gemini 2.0 Flash Thinking Experimental 01-21 </sub>
-- [x] [Mistral](https://mistral.ai/): <sub> Mistral Large, Pixtral Large, Codestral, Ministral </sub>
-- [x] [Cohere](https://cohere.com/): <sub> command-r-plus-08-2024, command-r-08-2024, command-r7b-12-2024 </sub>
-- [x] [DeepSeek](https://www.deepseek.com/): <sub> DeepSeek v3, DeepSeek R1 </sub>
-- [x] [OpenRouter](https://openrouter.ai/): <sub> All of the above </sub>
+Add models from any API.
+- [x] [OpenAI](https://openai.com/): Leading AI research company known for GPT models
+- [x] [Anthropic](https://www.anthropic.com/): AI safety-focused company developing large language models
+- [x] [Gemini](https://gemini.google.com/app): Google's AI division creating multimodal models
+- [x] [Mistral](https://mistral.ai/): French AI startup specializing in efficient language models
+- [x] [Cohere](https://cohere.com/): Enterprise-focused AI company providing NLP solutions
+- [x] [DeepSeek](https://www.deepseek.com/): Chinese AI firm developing open-source models
+- [x] [OpenRouter](https://openrouter.ai/): API aggregator providing access to multiple AI models
 
 <sub> [Full API List](https://docs.litellm.ai/docs/providers) </sub>
 
