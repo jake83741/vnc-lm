@@ -54,7 +54,7 @@ A new thread will be created once the model loads. To switch models within a thr
 # model switching examples
 
 # switch to deepseek-r1
-+ deepseek +r1
++ deepseek, +r1
 # switch to gemini-exp-1206
 + gemini, + exp, + 1206
 # switch to claude-sonnet-3.5
