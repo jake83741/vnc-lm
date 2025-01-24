@@ -1,7 +1,7 @@
 # vnc-lm
 
 ### Introduction
-Add Large Language Models to Discord. Run DeepSeek R-1, Llama 3.3, Gemini, and other models.
+Add Large Language Models to Discord. Add DeepSeek R-1, Llama 3.3, Gemini, and other models.
  
 **vnc-lm** is a Discord bot for messaging with language models. Configure model parameters, branch conversations, and edit prompts to improve responses. It is integrated with [LiteLLM](https://github.com/BerriAI/litellm) and [ollama](https://github.com/ollama/ollama).
 
