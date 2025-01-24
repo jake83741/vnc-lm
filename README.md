@@ -4,7 +4,7 @@
  
 Configure model parameters to change behavior. Branch conversations to see alternative paths. Edit prompts to improve responses. 
 
-Add models from any API.
+Add models from any hosted or local API.
 - [x] [OpenAI](https://openai.com/): Leading AI research company known for GPT models
 - [x] [Anthropic](https://www.anthropic.com/): AI safety-focused company developing large language models
 - [x] [Gemini](https://gemini.google.com/app): Google's AI division creating multimodal models
