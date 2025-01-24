@@ -5,29 +5,7 @@ Add Large Language Models to Discord. Add DeepSeek R-1, Llama 3.3, Gemini, and o
  
 **vnc-lm** is a Discord bot for messaging with language models. Configure model parameters, branch conversations, and edit prompts to improve responses. It is integrated with [LiteLLM](https://github.com/BerriAI/litellm) and [ollama](https://github.com/ollama/ollama).
 
-<details><summary>Supported Providers</summary> <br>
- 
-| Supported Providers |||
-|----------|----------|----------|
-| [OpenAI](https://docs.litellm.ai/docs/providers/openai) | [Huggingface](https://docs.litellm.ai/docs/providers/huggingface) | [Cloudflare Workers AI](https://docs.litellm.ai/docs/providers/cloudflare_workers) |
-| [OpenAI (Text Completion)](https://docs.litellm.ai/docs/providers/text_completion_openai) | [Databricks](https://docs.litellm.ai/docs/providers/databricks) | [DeepInfra](https://docs.litellm.ai/docs/providers/deepinfra) |
-| [OpenAI-Compatible Endpoints](https://docs.litellm.ai/docs/providers/openai_compatible) | [IBM watsonx.ai](https://docs.litellm.ai/docs/providers/watsonx) | [AI21](https://docs.litellm.ai/docs/providers/ai21) |
-| [Azure OpenAI](https://docs.litellm.ai/docs/providers/azure) | [Predibase](https://docs.litellm.ai/docs/providers/predibase) | [NLP Cloud](https://docs.litellm.ai/docs/providers/nlp_cloud) |
-| [Azure AI Studio](https://docs.litellm.ai/docs/providers/azure_ai) | [Nvidia NIM](https://docs.litellm.ai/docs/providers/nvidia_nim) | [Replicate](https://docs.litellm.ai/docs/providers/replicate) |
-| [VertexAI](https://docs.litellm.ai/docs/providers/vertex) | [XAI](https://docs.litellm.ai/docs/providers/xai) | [Together AI](https://docs.litellm.ai/docs/providers/togetherai) |
-| [Gemini - Google AI Studio](https://docs.litellm.ai/docs/providers/gemini) | [LM Studio](https://docs.litellm.ai/docs/providers/lm_studio) | [Voyage AI](https://docs.litellm.ai/docs/providers/voyage) |
-| [Anthropic](https://docs.litellm.ai/docs/providers/anthropic) | [Cerebras](https://docs.litellm.ai/docs/providers/cerebras) | [Jina AI](https://docs.litellm.ai/docs/providers/jina_ai) |
-| [AWS Sagemaker](https://docs.litellm.ai/docs/providers/aws_sagemaker) | [Volcano Engine](https://docs.litellm.ai/docs/providers/volcano) | [Aleph Alpha](https://docs.litellm.ai/docs/providers/aleph_alpha) |
-| [AWS Bedrock](https://docs.litellm.ai/docs/providers/bedrock) | [Triton Inference Server](https://docs.litellm.ai/docs/providers/triton-inference-server) | [Baseten](https://docs.litellm.ai/docs/providers/baseten) |
-| [LiteLLM Proxy (LLM Gateway)](https://docs.litellm.ai/docs/providers/litellm_proxy) | [Ollama](https://docs.litellm.ai/docs/providers/ollama) | [OpenRouter](https://docs.litellm.ai/docs/providers/openrouter) |
-| [Mistral AI API](https://docs.litellm.ai/docs/providers/mistral) | [Perplexity AI](https://docs.litellm.ai/docs/providers/perplexity) | [PaLM API - Google](https://docs.litellm.ai/docs/providers/palm) |
-| [Codestral API](https://docs.litellm.ai/docs/providers/codestral) | [FriendliAI](https://docs.litellm.ai/docs/providers/friendliai) | [Sambanova](https://docs.litellm.ai/docs/providers/sambanova) |
-| [Cohere](https://docs.litellm.ai/docs/providers/cohere) | [Groq](https://docs.litellm.ai/docs/providers/groq) | [Custom API Server](https://docs.litellm.ai/docs/providers/custom_llm_server) |
-| [Anyscale](https://docs.litellm.ai/docs/providers/anyscale) | [Github](https://docs.litellm.ai/docs/providers/github) | [Petals](https://docs.litellm.ai/docs/providers/petals) |
-| [Fireworks AI](https://docs.litellm.ai/docs/providers/fireworks_ai) | [Deepseek](https://docs.litellm.ai/docs/providers/deepseek) | [Xinference](https://docs.litellm.ai/docs/providers/xinference) |
-| [Clarifai](https://docs.litellm.ai/docs/providers/clarifai) | [VLLM](https://docs.litellm.ai/docs/providers/vllm) |
-
-</details>
+Support for APIs including: [OpenAI](https://openai.com/), [Anthropic](https://www.anthropic.com/), [Gemini](https://gemini.google.com/app), [Mistral](https://mistral.ai/), [Cohere](https://cohere.com/), [DeepSeek](https://www.deepseek.com/), [OpenRouter](https://openrouter.ai/), and [more](https://docs.litellm.ai/docs/providers).
 
 ![Screen Recording 2024-12-10 at 11 32 16 PM](https://github.com/user-attachments/assets/e880193a-7551-4f56-a8f1-6871dc4872d7)
 <br>
@@ -48,7 +26,7 @@ Load models using the `/model` command. Configure model behavior by adjusting th
 /model model:deepseek-r1:8b-llama-distill-fp16 num_ctx:32000
 ```
 
-A new thread will be created once the model loads. To switch models within a thread, use `+` followed by any distinctive part of the model name.
+A thread will be created once the model loads. To switch models within a thread, use `+` followed by any distinctive part of the model name.
 
 ```shell
 # model switching examples
@@ -62,18 +40,17 @@ A new thread will be created once the model loads. To switch models within a thr
 ```
 
 #### Message Handling 
-<details><summary>Message Handling</summary>
- 
-<br>
 
 Long messages are automatically split into pages. The context window supports text files, links, and images. Images can be handled either with multi-modal models or with OCR depending on how the `.env` is configured. The bot can be configured to require mention or to respond without a direct mention.
 
 Edit any prompt to refine a model's response. Conversations are stored in `bot_cache.json` and persist across Docker container restarts with a [bash script](https://github.com/jake83741/vnc-lm/blob/main/src/managers/cache/entrypoint.sh).
 
 Reply `branch` to any message in a thread to create a new branch of the conversation. The new branch will include a link to the original thread and a conversation summary. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
-</details>
 
-### LiteLLM Integration
+#### LiteLLM Integration
+<details><summary>LiteLLM Integration</summary>
+
+<br>
 
 With [LiteLLM](https://www.litellm.ai/) integration, a wide range of language model APIs can be accessed through a single proxy interface. Any model provider available through LiteLLM is supported. 
 
@@ -82,8 +59,12 @@ LiteLLM includes support for OpenAI-compatible APIs. This opens up support for m
 Add models by filling out `litellm_config.yaml` file in the `vnc-lm/` directory. The configuration supports all providers and parameters available through LiteLLM's proxy.
 
 LiteLLM is packaged with the bot and starts automatically when the Docker container is built. While LiteLLM integration is available, the bot can function solely with ollama.
+</details>
 
-### ollama Integration
+#### ollama Integration
+<details><summary>ollama Integration</summary>
+
+<br>
 
 Download [ollama](https://github.com/ollama/ollama) models by sending a model tag link in a channel.
 
@@ -103,7 +84,9 @@ Local models can be removed with the `remove` parameter of `/model`.
 > Enable model downloading and removal by adding your Discord user ID to the `.env`.
 
 The `num_ctx` parameter for `/model` can only be used with ollama models.
+</details>
 
+## Setup
 
 ### Requirements 
 [Docker](https://www.docker.com/): Docker is a platform designed to help developers build, share, and run container applications. We handle the tedious setup, so you can focus on the code.
