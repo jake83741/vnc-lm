@@ -12,7 +12,7 @@ Add models from leading APIs.
 - [x] [Cohere](https://cohere.com/): Enterprise-focused AI company providing NLP solutions
 - [x] [DeepSeek](https://www.deepseek.com/): Chinese AI firm developing open-source models
 - [x] [OpenRouter](https://openrouter.ai/): API aggregator providing access to multiple AI models
-- [x] [ollama](https://ollama.ai/): Open-source tool for running AI models locally
+- [x] [ollama](https://github.com/ollama/ollama): Open-source tool for running AI models locally
 
 <sub> [Full API List](https://docs.litellm.ai/docs/providers) </sub>
 
