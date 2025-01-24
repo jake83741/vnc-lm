@@ -62,11 +62,26 @@ A new thread will be created once the model loads. To switch models within a thr
 ```
 
 #### QoL Improvements
+<details><summary>QoL Improvements</summary>
+ 
+<br>
+
 Long messages are automatically split into pages. The context window supports text files, links, and images. Images can be handled either with multi-modal models or with OCR depending on how the `.env` is configured. The bot can be configured to require mention or to respond without a direct mention.
 
 Edit any prompt to refine a model's response. Conversations are stored in `bot_cache.json` and persist across Docker container restarts with a [bash script](https://github.com/jake83741/vnc-lm/blob/main/src/managers/cache/entrypoint.sh).
 
 Reply `branch` to any message in a thread to create a new branch of the conversation. The new branch will include a link to the original thread and a conversation summary. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
+</details>
+
+### LiteLLM Integration
+
+With [LiteLLM](https://www.litellm.ai/) integration, a wide range of language model APIs can be accessed through a single proxy interface. Any model provider available through LiteLLM is supported. 
+
+LiteLLM includes support for OpenAI-compatible APIs. This opens up support for many popular open source local LLM services.
+
+Add models by filling out `litellm_config.yaml` file in the `vnc-lm/` directory. The configuration supports all providers and parameters available through LiteLLM's proxy.
+
+LiteLLM is packaged with the bot and starts automatically when the Docker container is built. While LiteLLM integration is available, the bot can function solely with ollama.
 
 ### ollama Integration
 
@@ -89,15 +104,6 @@ Local models can be removed with the `remove` parameter of `/model`.
 
 The `num_ctx` parameter for `/model` can only be used with ollama models.
 
-### LiteLLM Integration
-
-With [LiteLLM](https://www.litellm.ai/) integration, a wide range of language model APIs can be accessed through a single proxy interface. Any model provider available through LiteLLM is supported. 
-
-LiteLLM includes support for OpenAI-compatible APIs. This opens up support for many popular open source local LLM services.
-
-Add models by filling out `litellm_config.yaml` file in the `vnc-lm/` directory. The configuration supports all providers and parameters available through LiteLLM's proxy.
-
-LiteLLM is packaged with the bot and starts automatically when the Docker container is built. While LiteLLM integration is available, the bot can function solely with ollama.
 
 ### Requirements 
 [Docker](https://www.docker.com/): Docker is a platform designed to help developers build, share, and run container applications. We handle the tedious setup, so you can focus on the code.
