@@ -62,7 +62,7 @@ A new thread will be created once the model loads. To switch models within a thr
 ```
 
 #### Usability 
-<details><summary>Usability</summary>
+<details><summary>Message Handling</summary>
  
 <br>
 
