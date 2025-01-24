@@ -43,9 +43,9 @@ Load models using the `/model` command. Configure model behavior by adjusting th
 # loading a model without configuring it
 /model model:gemini-exp-1206
 # loading a model with system prompt and temperature
-/model model:command-r-plus-08-2024 system_prompt: You are a helpful assistant. temperature: 0.4
+/model model:gemini-exp-1206 system_prompt: You are a helpful assistant. temperature: 0.4
 # loading a model with num_ctx
-/model model:granite3.1-dense:8b-instruct-q8_0 num_ctx:32000
+/model model:deepseek-r1:8b-llama-distill-fp16 num_ctx:32000
 ```
 
 A new thread will be created once the model loads. To switch models within a thread, use `+` followed by any distinctive part of the model name.
@@ -55,8 +55,8 @@ A new thread will be created once the model loads. To switch models within a thr
 
 # switch to deepseek-r1
 + deepseek +r1
-# switch to gemini-2.0-flash-exp
-+ gemini, + flash, + exp
+# switch to gemini-exp-1206
++ gemini, + exp, + 1206
 # switch to claude-sonnet-3.5
 + claude, + sonnet, + 3.5
 ```
@@ -74,15 +74,14 @@ Download ollama models by sending a model tag link in a channel.
 
 ```shell
 # model tag link examples
-https://ollama.com/library/llama3.2:1b-instruct-q8_0
-https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/blob/main/Llama-3.2-1B-Instruct-Q8_0.gguf
+https://ollama.com/library/deepseek-r1:8b-llama-distill-fp16
 ```
 
 Local models can be removed with the `remove` parameter of `/model`. 
 
 ```shell
 # ollama model removal example
-/model model:granite3-dense:8b-instruct-q8_0 remove:True
+/model model:deepseek-r1:8b-llama-distill-fp16 remove:True
 ```
 
 > [!NOTE]  
