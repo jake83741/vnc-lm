@@ -5,7 +5,15 @@ Add Large Language Models to Discord. Add DeepSeek R-1, Llama 3.3, Gemini, and o
  
 **vnc-lm** is a Discord bot for messaging with language models. Configure model parameters, branch conversations, and edit prompts to improve responses. It is integrated with [LiteLLM](https://github.com/BerriAI/litellm) and [ollama](https://github.com/ollama/ollama).
 
-Support for APIs including: [OpenAI](https://openai.com/), [Anthropic](https://www.anthropic.com/), [Gemini](https://gemini.google.com/app), [Mistral](https://mistral.ai/), [Cohere](https://cohere.com/), [DeepSeek](https://www.deepseek.com/), [OpenRouter](https://openrouter.ai/), and [more](https://docs.litellm.ai/docs/providers).
+| Provider | Popular Models |
+|----------|----------------|
+| [OpenAI](https://openai.com/) | GPT-4o, GPT-4o-mini, o1, o1-mini|
+| [Anthropic](https://www.anthropic.com/) | Claude 3.5 Sonnet, Claude 3.5 Haiku|
+| [Gemini](https://gemini.google.com/app) | Gemini 2.0 Flash Experimental, Gemini Experimental 1206, Gemini 2.0 Flash Thinking Experimental 01-21|
+| [Mistral](https://mistral.ai/) | Mistral Large, Pixtral Large, Codestral, Ministral |
+| [Cohere](https://cohere.com/) | command-r-plus-08-2024, command-r-08-2024, command-r7b-12-2024 |
+| [DeepSeek](https://www.deepseek.com/) | DeepSeek v3, DeepSeek R1|
+| [OpenRouter](https://openrouter.ai/) | All of the above |
 
 ![Screen Recording 2024-12-10 at 11 32 16 PM](https://github.com/user-attachments/assets/e880193a-7551-4f56-a8f1-6871dc4872d7)
 <br>
