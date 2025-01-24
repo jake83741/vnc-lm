@@ -85,7 +85,7 @@ LiteLLM is packaged with the bot and starts automatically when the Docker contai
 
 ### ollama Integration
 
-Download ollama models by sending a model tag link in a channel.
+Download [ollama](https://github.com/ollama/ollama) models by sending a model tag link in a channel.
 
 ```shell
 # model tag link examples
