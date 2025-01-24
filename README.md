@@ -5,14 +5,17 @@
 Configure model parameters to change behavior. Branch conversations to see alternative paths. Edit prompts to improve responses. 
 
 Add models from leading APIs.
-- [x] [OpenAI](https://openai.com/): Leading AI research company known for GPT models
-- [x] [Anthropic](https://www.anthropic.com/): AI safety-focused company developing large language models
-- [x] [Gemini](https://gemini.google.com/app): Google's AI division creating multimodal models
-- [x] [Mistral](https://mistral.ai/): French AI startup specializing in efficient language models
-- [x] [Cohere](https://cohere.com/): Enterprise-focused AI company providing NLP solutions
-- [x] [DeepSeek](https://www.deepseek.com/): Chinese AI firm developing open-source models
-- [x] [OpenRouter](https://openrouter.ai/): API aggregator providing access to multiple AI models
-- [x] [ollama](https://github.com/ollama/ollama): Open-source tool for running AI models locally
+
+| Provider | Description |
+|----------|-------------|
+| [OpenAI](https://openai.com/) | Leading AI research company known for GPT models |
+| [Anthropic](https://www.anthropic.com/) | AI safety-focused company developing large language models |
+| [Gemini](https://gemini.google.com/app) | Google's AI division creating multimodal models |
+| [Mistral](https://mistral.ai/) | French AI startup specializing in efficient language models |
+| [Cohere](https://cohere.com/) | Enterprise-focused AI company providing NLP solutions |
+| [DeepSeek](https://www.deepseek.com/) | Chinese AI firm developing open-source models |
+| [OpenRouter](https://openrouter.ai/) | API aggregator providing access to multiple AI models |
+| [ollama](https://github.com/ollama/ollama) | Open-source tool for running AI models locally |
 
 <sub> [Full API List](https://docs.litellm.ai/docs/providers) </sub>
 
