@@ -4,15 +4,13 @@
  
 Configure model parameters to change behavior. Branch conversations to see alternative paths. Edit prompts to improve responses. 
 
-| Provider | Popular Models |
-|----------|----------------|
-| [OpenAI](https://openai.com/) | GPT-4o, GPT-4o-mini, o1, o1-mini|
-| [Anthropic](https://www.anthropic.com/) | Claude 3.5 Sonnet, Claude 3.5 Haiku|
-| [Gemini](https://gemini.google.com/app) | Gemini 2.0 Flash Experimental, Gemini Experimental 1206, Gemini 2.0 Flash Thinking Experimental 01-21|
-| [Mistral](https://mistral.ai/) | Mistral Large, Pixtral Large, Codestral, Ministral |
-| [Cohere](https://cohere.com/) | command-r-plus-08-2024, command-r-08-2024, command-r7b-12-2024 |
-| [DeepSeek](https://www.deepseek.com/) | DeepSeek v3, DeepSeek R1|
-| [OpenRouter](https://openrouter.ai/) | All of the above |
+- [x] [OpenAI](https://openai.com/): <sub> GPT-4o, GPT-4o-mini, o1, o1-mini </sub> 
+- [x] [Anthropic](https://www.anthropic.com/): <sub> Claude 3.5 Sonnet, Claude 3.5 Haiku </sub>
+- [x] [Gemini](https://gemini.google.com/app): <sub> Gemini 2.0 Flash Experimental, Gemini Experimental 1206, Gemini 2.0 Flash Thinking Experimental 01-21 </sub>
+- [x] [Mistral](https://mistral.ai/): <sub> Mistral Large, Pixtral Large, Codestral, Ministral </sub>
+- [x] [Cohere](https://cohere.com/): <sub> command-r-plus-08-2024, command-r-08-2024, command-r7b-12-2024 </sub>
+- [x] [DeepSeek](https://www.deepseek.com/): <sub> DeepSeek v3, DeepSeek R1 </sub>
+- [x] [OpenRouter](https://openrouter.ai/): <sub> All of the above </sub>
 
 <sub> [Full API List](https://docs.litellm.ai/docs/providers) </sub>
 
