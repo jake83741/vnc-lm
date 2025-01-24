@@ -173,6 +173,9 @@ docker compose up --build --no-color
 > Send `/help` for instructions on how to use the bot.
 
 ### Tree Diagram
+
+<details><summary>Tree Diagram</summary> <br>
+
 ```shell
 .
 ├── api-connections/             
@@ -202,6 +205,8 @@ docker compose up --build --no-color
     ├── index.ts                 # Central export point for utilities
     └── settings.ts              # Global settings and configuration
 ```
+
+</details>
 
 ### Dependencies
 <details>
