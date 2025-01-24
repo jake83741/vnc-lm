@@ -14,6 +14,7 @@ Add Large Language Models to Discord. Add DeepSeek R-1, Llama 3.3, Gemini, and o
 | [Cohere](https://cohere.com/) | command-r-plus-08-2024, command-r-08-2024, command-r7b-12-2024 |
 | [DeepSeek](https://www.deepseek.com/) | DeepSeek v3, DeepSeek R1|
 | [OpenRouter](https://openrouter.ai/) | All of the above |
+
 <sub> [Full Supported API List](https://docs.litellm.ai/docs/providers) </sub>
 
 ![Screen Recording 2024-12-10 at 11 32 16 PM](https://github.com/user-attachments/assets/e880193a-7551-4f56-a8f1-6871dc4872d7)
