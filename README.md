@@ -88,7 +88,7 @@ LiteLLM is packaged with the bot and starts automatically when the Docker contai
 Download [ollama](https://github.com/ollama/ollama) models by sending a model tag link in a channel.
 
 ```shell
-# model tag link examples
+# model tag link example
 https://ollama.com/library/deepseek-r1:8b-llama-distill-fp16
 ```
 
