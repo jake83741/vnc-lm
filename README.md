@@ -1,7 +1,7 @@
 # vnc-lm
 
 ### Introduction
-Message with DeepSeek, Gemini, Llama 3.3, and other LLMs through Discord.
+Easily add LLMs to Discord.
  
 **vnc-lm** is a Discord bot for messaging with language models. Configure model parameters, branch conversations, and edit prompts to improve responses. It is integrated with [ollama](https://github.com/ollama/ollama) and [LiteLLM](https://github.com/BerriAI/litellm).
 
