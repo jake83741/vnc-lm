@@ -3,7 +3,7 @@
 ### Introduction
 Add the latest LLMs to your Discord server.
  
-**vnc-lm** is a Discord bot for messaging with language models. Configure model parameters, branch conversations, and edit prompts to improve responses. It is integrated with [ollama](https://github.com/ollama/ollama) and [LiteLLM](https://github.com/BerriAI/litellm).
+**vnc-lm** is a Discord bot for messaging with language models. Configure model parameters, branch conversations, and edit prompts to improve responses. It is integrated with [LiteLLM](https://github.com/BerriAI/litellm) and [ollama](https://github.com/ollama/ollama).
 
 <details><summary>Supported Providers</summary> <br>
  
