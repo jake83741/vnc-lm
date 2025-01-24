@@ -44,7 +44,7 @@ Load models using the `/model` command. Configure model behavior by adjusting th
 /model model:gemini-exp-1206
 # loading a model with system prompt and temperature
 /model model:gemini-exp-1206 system_prompt: You are a helpful assistant. temperature: 0.4
-# loading a model with num_ctx
+# loading an ollama model with num_ctx
 /model model:deepseek-r1:8b-llama-distill-fp16 num_ctx:32000
 ```
 
