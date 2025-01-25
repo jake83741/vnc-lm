@@ -46,10 +46,10 @@ Load models using the `/model` command. Configure model behavior by adjusting th
 # loading an ollama model with num_ctx
 /model model:deepseek-r1:8b-llama-distill-fp16 num_ctx:32000
 
-# download an ollama model by sending a model tag link
+# downloading an ollama model by sending a model tag link
 https://ollama.com/library/deepseek-r1:8b-llama-distill-fp16
 
-# remove an ollama model
+# removing an ollama model
 /model model:deepseek-r1:8b-llama-distill-fp16 remove:True
 ```
 
