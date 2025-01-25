@@ -66,15 +66,11 @@ A thread will be created once the model loads. To switch models within a thread,
 + claude, + sonnet, + 3.5
 ```
 
+The bot integrates with [LiteLLM](https://www.litellm.ai/), which provides a unified interface to access leading large language model APIs through a single proxy. This integration supports OpenAI-compatible APIs, enabling seamless integration with popular open-source LLM services. You can add new models by editing `litellm_config.yaml` in the `vnc-lm/` directory. While LiteLLM starts automatically with the Docker container, the bot can also run with Ollama alone if preferred.
+
 #### Message Handling 
 
 Messages are automatically paginated and support text files, links, and images (via multi-modal models or OCR based on `.env` settings). Edit prompts to refine responses, with conversations persisting across container restarts in `bot_cache.json`. Create conversation branches by replying 'branch' to any message. Hop between different conversation paths while maintaining separate histories.
-
-#### LiteLLM Integration
-
-[LiteLLM](https://www.litellm.ai/) provides a unified interface to access leading large language model APIs through a single proxy. It supports OpenAI-compatible APIs, enabling integration with popular open-source LLM services.
-
-Add models by editing `litellm_config.yaml` in the `vnc-lm/` directory. LiteLLM starts automatically with the Docker container, though the bot can run with Ollama alone.
 
 ----
 
