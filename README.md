@@ -45,6 +45,10 @@ Load models using the `/model` command. Configure model behavior by adjusting th
 /model model:gemini-exp-1206 system_prompt: You are a helpful assistant. temperature: 0.4
 # loading an ollama model with num_ctx
 /model model:deepseek-r1:8b-llama-distill-fp16 num_ctx:32000
+# download an ollama model by sending a model tag link
+https://ollama.com/library/deepseek-r1:8b-llama-distill-fp16
+# remove an ollama model
+/model model:deepseek-r1:8b-llama-distill-fp16 remove:True
 ```
 
 A thread will be created once the model loads. To switch models within a thread, use `+` followed by any distinctive part of the model name.
@@ -78,27 +82,6 @@ Add models by filling out `litellm_config.yaml` file in the `vnc-lm/` directory.
 
 LiteLLM is packaged with the bot and starts automatically when the Docker container is built. While LiteLLM integration is available, the bot can function solely with ollama.
 
-#### ollama Integration
-
-Download [ollama](https://github.com/ollama/ollama) models by sending a model tag link in a channel.
-
-```shell
-# model tag link example
-https://ollama.com/library/deepseek-r1:8b-llama-distill-fp16
-```
-
-Local models can be removed with the `remove` parameter of `/model`. 
-
-```shell
-# ollama model removal example
-/model model:deepseek-r1:8b-llama-distill-fp16 remove:True
-```
-
-> [!NOTE]  
-> Enable model downloading and removal by adding your Discord user ID to the `.env`.
-
-The `num_ctx` parameter for `/model` can only be used with ollama models.
-
 ----
 
 ### Requirements 
@@ -121,7 +104,7 @@ mv .env.example .env
 
 # Discord bot token
 TOKEN=
-# administrator Discord user id
+# administrator Discord user id (necessary for model downloading / removal privileges)
 ADMIN=
 # require bot mention (default: false)
 REQUIRE_MENTION=
