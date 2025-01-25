@@ -137,6 +137,8 @@ docker compose up --build --no-color
 > [!NOTE]  
 > Send `/help` for instructions on how to use the bot.
 
+### Integrations
+
 #### LiteLLM Integration
 
 With [LiteLLM](https://www.litellm.ai/) integration, a wide range of language model APIs can be accessed through a single proxy interface. Any model provider available through LiteLLM is supported. 
