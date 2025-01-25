@@ -70,8 +70,6 @@ The bot integrates with [LiteLLM](https://www.litellm.ai/), which provides a uni
 
 Messages are automatically paginated and support text files, links, and images (via multi-modal models or OCR based on `.env` settings). Edit prompts to refine responses, with conversations persisting across container restarts in `bot_cache.json`. Create conversation branches by replying `branch` to any message. Hop between different conversation paths while maintaining separate histories.
 
-----
-
 ### Requirements 
 [Docker](https://www.docker.com/): Docker is a platform designed to help developers build, share, and run container applications. We handle the tedious setup, so you can focus on the code.
 
