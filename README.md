@@ -37,18 +37,16 @@ Configure model parameters to change behavior. Branch conversations to see alter
 Load models using the `/model` command. Configure model behavior by adjusting the `system_prompt` (base instructions), `temperature` (response randomness), and `num_ctx` (context length) parameters. 
 
 ```shell
+# model management examples
+
 # loading a model without configuring it
 /model model:gemini-exp-1206
-
 # loading a model with system prompt and temperature
 /model model:gemini-exp-1206 system_prompt: You are a helpful assistant. temperature: 0.4
-
 # loading an ollama model with num_ctx
 /model model:deepseek-r1:8b-llama-distill-fp16 num_ctx:32000
-
 # downloading an ollama model by sending a model tag link
 https://ollama.com/library/deepseek-r1:8b-llama-distill-fp16
-
 # removing an ollama model
 /model model:deepseek-r1:8b-llama-distill-fp16 remove:True
 ```
