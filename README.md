@@ -131,7 +131,7 @@ model_list:
 docker compose up --build --no-color
 ```
 
-![Screen Recording 2024-11-24 at 12 51 26 PM](https://github.com/user-attachments/assets/57f207db-ffec-4745-b5e3-784db59564aa)
+![Screen Recording 2025-01-24 at 11 14 43 PM](https://github.com/user-attachments/assets/c4b2265a-a35a-4e7d-923a-334b3bb40b39)
 <sub>successful build</sub>
 
 > [!NOTE]  
