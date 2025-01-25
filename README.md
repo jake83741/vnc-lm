@@ -28,7 +28,7 @@ Configure model parameters to change behavior. Branch conversations to see alter
 
 </details>
 
-![Screen Recording 2025-01-24 at 10 58 39 PM](https://github.com/user-attachments/assets/c07cee24-7810-47f1-b84b-3eb1eb5d16f9)
+![Screen Recording 2025-01-24 at 11 56 24 PM](https://github.com/user-attachments/assets/62185f98-1ff9-400b-adf3-234c7d5593ca)
 <br>
 
 ### Features
