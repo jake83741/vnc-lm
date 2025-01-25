@@ -161,8 +161,6 @@ The `num_ctx` parameter for `/model` can only be used with ollama models.
 
 ### Tree Diagram
 
-<details><summary>Tree Diagram</summary> <br>
-
 ```shell
 .
 ├── api-connections/             
@@ -192,8 +190,6 @@ The `num_ctx` parameter for `/model` can only be used with ollama models.
     ├── index.ts                 # Central export point for utilities
     └── settings.ts              # Global settings and configuration
 ```
-
-</details>
 
 ### Dependencies
 <details>
