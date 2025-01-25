@@ -68,6 +68,37 @@ Edit any prompt to refine a model's response. Conversations are stored in `bot_c
 
 Reply `branch` to any message in a thread to create a new branch of the conversation. The new branch will include a link to the original thread and a conversation summary. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
 
+#### LiteLLM Integration
+
+With [LiteLLM](https://www.litellm.ai/) integration, a wide range of language model APIs can be accessed through a single proxy interface. Any model provider available through LiteLLM is supported. 
+
+LiteLLM includes support for OpenAI-compatible APIs. This opens up support for many popular open source local LLM services.
+
+Add models by filling out `litellm_config.yaml` file in the `vnc-lm/` directory. The configuration supports all providers and parameters available through LiteLLM's proxy.
+
+LiteLLM is packaged with the bot and starts automatically when the Docker container is built. While LiteLLM integration is available, the bot can function solely with ollama.
+
+#### ollama Integration
+
+Download [ollama](https://github.com/ollama/ollama) models by sending a model tag link in a channel.
+
+```shell
+# model tag link example
+https://ollama.com/library/deepseek-r1:8b-llama-distill-fp16
+```
+
+Local models can be removed with the `remove` parameter of `/model`. 
+
+```shell
+# ollama model removal example
+/model model:deepseek-r1:8b-llama-distill-fp16 remove:True
+```
+
+> [!NOTE]  
+> Enable model downloading and removal by adding your Discord user ID to the `.env`.
+
+The `num_ctx` parameter for `/model` can only be used with ollama models.
+
 ----
 
 ### Requirements 
@@ -136,39 +167,6 @@ docker compose up --build --no-color
 
 > [!NOTE]  
 > Send `/help` for instructions on how to use the bot.
-
-### Integrations
-
-#### LiteLLM Integration
-
-With [LiteLLM](https://www.litellm.ai/) integration, a wide range of language model APIs can be accessed through a single proxy interface. Any model provider available through LiteLLM is supported. 
-
-LiteLLM includes support for OpenAI-compatible APIs. This opens up support for many popular open source local LLM services.
-
-Add models by filling out `litellm_config.yaml` file in the `vnc-lm/` directory. The configuration supports all providers and parameters available through LiteLLM's proxy.
-
-LiteLLM is packaged with the bot and starts automatically when the Docker container is built. While LiteLLM integration is available, the bot can function solely with ollama.
-
-#### ollama Integration
-
-Download [ollama](https://github.com/ollama/ollama) models by sending a model tag link in a channel.
-
-```shell
-# model tag link example
-https://ollama.com/library/deepseek-r1:8b-llama-distill-fp16
-```
-
-Local models can be removed with the `remove` parameter of `/model`. 
-
-```shell
-# ollama model removal example
-/model model:deepseek-r1:8b-llama-distill-fp16 remove:True
-```
-
-> [!NOTE]  
-> Enable model downloading and removal by adding your Discord user ID to the `.env`.
-
-The `num_ctx` parameter for `/model` can only be used with ollama models.
 
 ### Tree Diagram
 
