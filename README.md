@@ -129,9 +129,6 @@ docker compose up --build --no-color
 > Send `/help` for instructions on how to use the bot.
 
 #### LiteLLM Integration
-<details><summary>LiteLLM Integration</summary>
-
-<br>
 
 With [LiteLLM](https://www.litellm.ai/) integration, a wide range of language model APIs can be accessed through a single proxy interface. Any model provider available through LiteLLM is supported. 
 
@@ -140,12 +137,8 @@ LiteLLM includes support for OpenAI-compatible APIs. This opens up support for m
 Add models by filling out `litellm_config.yaml` file in the `vnc-lm/` directory. The configuration supports all providers and parameters available through LiteLLM's proxy.
 
 LiteLLM is packaged with the bot and starts automatically when the Docker container is built. While LiteLLM integration is available, the bot can function solely with ollama.
-</details>
 
 #### ollama Integration
-<details><summary>ollama Integration</summary>
-
-<br>
 
 Download [ollama](https://github.com/ollama/ollama) models by sending a model tag link in a channel.
 
@@ -165,7 +158,6 @@ Local models can be removed with the `remove` parameter of `/model`.
 > Enable model downloading and removal by adding your Discord user ID to the `.env`.
 
 The `num_ctx` parameter for `/model` can only be used with ollama models.
-</details>
 
 ### Tree Diagram
 
