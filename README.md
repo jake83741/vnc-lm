@@ -116,8 +116,6 @@ cd vnc-lm
 mv .env.example .env
 ```
 
-----
-
 ```shell
 # configure the below .env fields
 
