@@ -68,7 +68,7 @@ A thread will be created once the model loads. To switch models within a thread,
 
 #### Message Handling 
 
-Messages are automatically paginated and support text files, links, and images (via multi-modal models or OCR based on .env settings). Edit prompts to refine responses, with conversations persisting across container restarts in bot_cache.json. Create conversation branches by replying 'branch' to any message. Hop between different conversation paths while maintaining separate histories.
+Messages are automatically paginated and support text files, links, and images (via multi-modal models or OCR based on `.env` settings). Edit prompts to refine responses, with conversations persisting across container restarts in `bot_cache.json`. Create conversation branches by replying 'branch' to any message. Hop between different conversation paths while maintaining separate histories.
 
 #### LiteLLM Integration
 
