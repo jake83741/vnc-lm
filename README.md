@@ -4,7 +4,7 @@
  
 Configure model parameters to change behavior. Branch conversations to see alternative paths. Edit prompts to improve responses. 
 
-<sub>[See the full list of supported APIs](https://docs.litellm.ai/docs/providers)</sub>
+<sub>[Supported API Providers](https://docs.litellm.ai/docs/providers)</sub>
 
 ![Screen Recording 2025-01-24 at 11 56 24 PM](https://github.com/user-attachments/assets/62185f98-1ff9-400b-adf3-234c7d5593ca)
 <br>
