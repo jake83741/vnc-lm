@@ -74,13 +74,9 @@ Reply `branch` to any message in a thread to create a new branch of the conversa
 
 #### LiteLLM Integration
 
-With [LiteLLM](https://www.litellm.ai/) integration, a wide range of language model APIs can be accessed through a single proxy interface. Any model provider available through LiteLLM is supported. 
+[LiteLLM](https://www.litellm.ai/) provides a unified interface to access multiple language model APIs through a single proxy. It supports OpenAI-compatible APIs, enabling integration with popular open-source LLM services.
 
-LiteLLM includes support for OpenAI-compatible APIs. This opens up support for many popular open source local LLM services.
-
-Add models by filling out `litellm_config.yaml` file in the `vnc-lm/` directory. The configuration supports all providers and parameters available through LiteLLM's proxy.
-
-LiteLLM is packaged with the bot and starts automatically when the Docker container is built. While LiteLLM integration is available, the bot can function solely with ollama.
+Configure models by editing `litellm_config.yaml` in the `vnc-lm/` directory. LiteLLM starts automatically with the Docker container, though the bot can run with Ollama alone.
 
 ----
 
