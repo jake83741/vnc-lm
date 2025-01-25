@@ -68,6 +68,8 @@ Edit any prompt to refine a model's response. Conversations are stored in `bot_c
 
 Reply `branch` to any message in a thread to create a new branch of the conversation. The new branch will include a link to the original thread and a conversation summary. Hop between branches while keeping separate conversation histories, letting you explore different paths with any model.
 
+----
+
 ### Requirements 
 [Docker](https://www.docker.com/): Docker is a platform designed to help developers build, share, and run container applications. We handle the tedious setup, so you can focus on the code.
 
