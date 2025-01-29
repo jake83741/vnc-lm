@@ -6,6 +6,9 @@ Configure model parameters to change behavior. Branch conversations to see alter
 
 <sub>[Supported API providers](https://docs.litellm.ai/docs/providers)</sub>
 
+![Screen Recording 2025-01-28 at 10 26 05 PM](https://github.com/user-attachments/assets/47c81954-e1c3-4c5f-8e0a-db68abe25117)
+<br>
+
 ### Features
 #### Model Management
 
