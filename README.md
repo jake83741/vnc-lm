@@ -2,7 +2,7 @@
 
 ### Add Large Language Models to Discord. Add DeepSeek R-1, Llama 3.3, Gemini, and other models.
  
-Configure model parameters to change behavior. Branch conversations to see alternative paths. Edit prompts to improve responses. 
+Easily change models. Branch conversations to see new paths. Edit prompt messages to improve responses. 
 
 <sub>[Supported API providers](https://docs.litellm.ai/docs/providers)</sub>
 
