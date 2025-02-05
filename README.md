@@ -12,7 +12,7 @@ Easily change models. Branch conversations to see new paths. Edit prompt message
 ### Features
 #### Model Management
 
-Load models using the `/model` command. Configure model behavior by adjusting the `system_prompt` (base instructions), `temperature` (response randomness), and `num_ctx` (context length) parameters. 
+Load models using the `/model` command. Configure model behavior by adjusting the `system_prompt` (base instructions), `temperature` (response randomness), and `num_ctx` (context length) parameters. The bot is integrated with [ollama](https://github.com/ollama/ollama), which allows users to manage local models right from Discord.
 
 ```shell
 # model management examples
