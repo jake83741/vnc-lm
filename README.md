@@ -1,6 +1,6 @@
 # vnc-lm
 
-### Add Large Language Models to Discord. Add DeepSeek R-1, Llama 3.3, Gemini, and other models.
+### A Discord bot for large language models. Add DeepSeek R-1, Llama 3.3, Gemini, and other models.
  
 Easily change models. Branch conversations to see new paths. Edit prompt messages to improve responses. 
 
