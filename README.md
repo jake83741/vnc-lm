@@ -113,38 +113,6 @@ docker compose up --build --no-color
 > [!NOTE]  
 > Send `/help` for instructions on how to use the bot.
 
-### Tree Diagram
-
-```shell
-.
-├── api-connections/             
-│   ├── base-client.ts           # Abstract base class defining common client interface and methods
-│   ├── factory.ts               # Factory class for instantiating appropriate model clients
-│   └── provider/                
-│       ├── litellm/            
-│       │   └── client.ts        # Client implementation for LiteLLM API integration
-│       └── ollama/
-│           └── client.ts        # Client implementation for Ollama API integration
-├── bot.ts                       # Main bot initialization and event handling setup
-├── commands/                    
-│   ├── base.ts                  # Base command class with shared command functionality
-│   ├── handlers.ts              # Implementation of individual bot commands
-│   └── registry.ts              # Command registration and slash command setup
-├── managers/                    
-│   ├── cache/                   
-│   │   ├── entrypoint.sh        # Cache initialization script
-│   │   ├── manager.ts           # Cache management implementation
-│   │   └── store.ts             # Cache storage and persistence
-│   └── generation/              
-│       ├── core.ts              # Core message generation logic
-│       ├── formatter.ts         # Message formatting and pagination
-│       └── generator.ts         # Stream-based response generation
-└── utilities/                   
-    ├── error-handler.ts         # Global error handling
-    ├── index.ts                 # Central export point for utilities
-    └── settings.ts              # Global settings and configuration
-```
-
 ### Dependencies
 <details>
 <br>
