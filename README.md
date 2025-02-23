@@ -29,7 +29,7 @@ https://ollama.com/library/deepseek-r1:8b-llama-distill-fp16
 /model model:deepseek-r1:8b-llama-distill-fp16 remove:True
 ```
 
-A thread will be created once the model loads. To switch models within a thread, use `+` followed by any distinctive part of the model name.
+A thread will be created once the model loads. To switch models within a thread, send `+` followed by any distinctive part of the model name.
 
 ```shell
 # model switching examples
