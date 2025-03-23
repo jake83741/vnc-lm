@@ -51,7 +51,7 @@ The bot is integrated with [LiteLLM](https://www.litellm.ai/), which provides a 
 
 #### Web Search
 
-After being enabled with `+ search`, the bot will use a RAG pipeline to gather additional context from Wikipedia and DuckDuckGo. The context gathered will then be passed to a vector store and analyzed for relevance using a hybrid approach that combines vector similarity and keyword matching. The bot will then pull the most relevant chunks of context and add it to the user query (~500 tokens). Web search can be turned off with `+ model`. 
+After being enabled with `+ search`, the bot will use a RAG pipeline to gather additional context from Wikipedia and DuckDuckGo. The context gathered will then be passed to a vector store and analyzed for relevance using a hybrid approach that combines vector similarity and keyword matching. The bot will then pull the most relevant chunks of context and add it to the user query `~500 tokens`. Web search can be turned off with `+ model`. 
 
 #### Message Handling 
 
