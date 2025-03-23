@@ -6,7 +6,7 @@ Easily change models. Edit prompt messages to quickly improve responses. Seamles
 
 <sub>[Supported API providers](https://docs.litellm.ai/docs/providers)</sub>
 
-![Screen Recording 2025-01-28 at 10 26 05 PM](https://github.com/user-attachments/assets/47c81954-e1c3-4c5f-8e0a-db68abe25117)
+![Screen Recording 2025-03-23 at 1 44 27 PM](https://github.com/user-attachments/assets/1828808a-4447-443c-8534-6a3b1ffd05d7)
 <br>
 
 ### Features
