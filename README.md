@@ -2,7 +2,7 @@
 
 ### A Discord bot for large language models. Add Gemini, Sonnet-3.7 DeepSeek R-1, and other models.
  
-Easily change models. Edit prompt messages to quickly improve responses. Seamlessly turn on web search. 
+Easily change models. Edit prompt messages to quickly improve responses. Enable web search. 
 
 <sub>[Supported API providers](https://docs.litellm.ai/docs/providers)</sub>
 
