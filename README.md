@@ -51,7 +51,7 @@ The bot is integrated with [LiteLLM](https://www.litellm.ai/), which provides a 
 
 #### Web Search
 
-After being enabled with `+ search`, the bot will use a RAG pipeline to gather additional context from multiple sources: encyclopedia articles, web search results, and news sources. The context gathered will then be passed to a vector store and analyzed for relevance using a hybrid approach that combines vector similarity and keyword matching. The system prioritizes relevant and recent information, with special emphasis on time-sensitive queries. The bot will pull the most relevant content chunks and add around tokens of context to the user query, delivering highly targeted information while maintaining efficiency. This context represents just a small percentage of the total information gathered during search. Web search can be turned off with `+ model`.
+After being enabled with `+ search`, the bot will use a RAG pipeline to gather additional context from multiple sources: [Wikipedia](https://www.wikipedia.org/) articles, web search results, and news sources. The context gathered will then be passed to a vector store and analyzed for relevance using a hybrid approach that combines vector similarity and keyword matching. The system prioritizes relevant and recent information, with special emphasis on time-sensitive queries. The bot will pull the most relevant content chunks and add around tokens of context to the user query, delivering highly targeted information while maintaining efficiency. This context represents just a small percentage of the total information gathered during search. Web search can be turned off with `+ model`.
 
 #### Message Handling 
 
