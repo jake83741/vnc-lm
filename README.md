@@ -6,7 +6,7 @@ Easily change models. Edit prompt messages to quickly improve responses. Enable 
 
 <sub>[Supported API providers](https://docs.litellm.ai/docs/providers)</sub>
 
-![Screen Recording 2025-04-18 at 1 46 34 AM](https://github.com/user-attachments/assets/54b7a1a4-dc39-4cc2-8f5f-adb3d5c63481)
+![Screen Recording 2025-04-18 at 1 55 10 AM](https://github.com/user-attachments/assets/3e26d6f2-7733-4b96-9c30-fe2323b5f16a)
 <br>
 
 ### Features
