@@ -117,6 +117,7 @@ docker compose up --build --no-color
 ```
 
 <img width="1132" alt="image" src="https://github.com/user-attachments/assets/8ae065ea-da37-43da-9734-6858605c9c9b" />
+
 <sub>Successful build</sub>
 
 > [!NOTE]  
