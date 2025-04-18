@@ -34,8 +34,8 @@ A thread will be created once the model loads. To switch models within a thread,
 ```shell
 # model switching examples
 
-# switch to deepseek-v3
-+ deepseek, + v3
+# switch to gpt-4.1
++ gpt, + 4.1
 # switch to gemini-exp-2.5-pro
 + gemini, + exp, + 2.5
 # switch to claude-sonnet-3.7
