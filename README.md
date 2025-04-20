@@ -1,6 +1,6 @@
 # vnc-lm
 
-### A Discord bot for large language models. Add Gemini, Sonnet, GPT, and other models.
+### A Discord bot for large language models. Add Gemini 2.5 Pro, Claude Sonnet 3.7, GPT 4.1, and other models.
  
 Easily change models. Edit prompt messages to quickly improve responses. Enable web search. 
 
